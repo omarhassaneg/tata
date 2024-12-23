@@ -1,0 +1,24 @@
+.theme-name {
+  color: #FFFFFF; /* Change to white for better visibility in dark mode */
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --text-primary: #0F1C2E;
+    --text-secondary: rgba(15, 28, 46, 0.8);
+  }
+
+  .dark {
+    --background: #0F1C2E;
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.8);
+  }
+}
+
+body {
+  @apply bg-background text-primary transition-colors duration-200;
+}

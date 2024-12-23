@@ -1,0 +1,161 @@
+{
+  "auth": {
+    "title": "Se connecter ou S'inscrire",
+    "subtitle": "Créez un compte ou connectez-vous pour gérer votre entreprise",
+    "continueWithEmail": "Continuer avec e-mail",
+    "continueWithPhone": "Continuer avec téléphone",
+    "continueWithGoogle": "Continuer avec Google",
+    "continueWithApple": "Continuer avec Apple",
+    "or": "OU",
+    "phoneNumber": "Numéro de téléphone",
+    "emailAddress": "Adresse e-mail",
+    "continue": "Continuer",
+    "pleaseWait": "Veuillez patienter..."
+  },
+  "location": {
+    "title": "Où proposez-vous vos services ?",
+    "subtitle": "Sélectionnez où vous souhaitez fournir vos services. Vous pouvez être mobile, travailler depuis un studio, ou les deux.",
+    "mobile": {
+      "title": "Services Mobiles",
+      "description": "Déplacez-vous chez vos clients"
+    },
+    "studio": {
+      "title": "Services en Studio",
+      "description": "Les clients viennent à vous"
+    },
+    "continue": "Continuer",
+    "saving": "Enregistrement..."
+  },
+  "address": {
+    "title": "Entrez votre adresse de base",
+    "subtitle": "Ajoutez l'emplacement de votre studio ou le point de départ pour les services mobiles. Cela nous aide à calculer précisément les distances de déplacement.",
+    "searchPlaceholder": "Rechercher une adresse...",
+    "billingAddress": {
+      "same": "L'adresse de facturation est identique à l'adresse de base",
+      "title": "Adresse de facturation",
+      "searchPlaceholder": "Rechercher une adresse de facturation..."
+    },
+    "continue": "Continuer",
+    "saving": "Enregistrement...",
+    "validation": {
+      "selectAddress": "Veuillez sélectionner une adresse valide parmi les suggestions",
+      "selectBilling": "Veuillez sélectionner une adresse de facturation valide parmi les suggestions"
+    }
+  },
+  "serviceArea": {
+    "title": "Votre zone de couverture",
+    "subtitle": "Nous avons configuré des paramètres recommandés basés sur les standards de l'industrie. Vous pouvez personnaliser ces valeurs selon vos besoins.",
+    "radius": {
+      "title": "km de rayon",
+      "description": "Zone de service autour de {address}"
+    },
+    "travelFee": {
+      "title": "/ km",
+      "description": "Frais de déplacement par km"
+    },
+    "minimumFee": {
+      "title": "frais minimum de déplacement",
+      "description": "Quelle que soit la distance"
+    },
+    "minimumSpend": {
+      "title": "dépense minimum",
+      "description": "Dépense minimum par réservation"
+    },
+    "continue": "Continuer",
+    "saving": "Enregistrement..."
+  },
+  "success": {
+    "title": "Informations de base complétées",
+    "subtitle": "Maintenant, passons en revue vos paramètres",
+    "continue": "Continuer"
+  },
+  "serviceConfirmation": {
+    "badge": "Services ajoutés",
+    "title": "Vos services",
+    "addedToProfile": "Ajouté à votre profil",
+    "pricing": {
+      "value": "Prix standard du secteur",
+      "label": "Tarification appliquée"
+    },
+    "addons": {
+      "value": "Suppléments ajoutés",
+      "label": "Ajustez les durées et les prix plus tard"
+    },
+    "continue": "Continuer"
+  },
+  "policies": {
+    "badge": "Protection de l'entreprise",
+    "title": "Politiques et décharges",
+    "subtitle": "Nous avons créé des politiques et des décharges complètes pour votre entreprise, vous n'avez donc pas à partir de zéro. Vous pouvez les personnaliser selon vos besoins.",
+    "stats": {
+      "policies": {
+        "value": "10 Politiques",
+        "label": "Politiques d'entreprise pré-rédigées"
+      },
+      "waivers": {
+        "value": "7 Décharges",
+        "label": "Accords de protection prêts à l'emploi"
+      }
+    },
+    "continue": "Continuer"
+  },
+  "schedule": {
+    "badge": "Heures de travail",
+    "title": "Votre emploi du temps",
+    "subtitle": "Définissez vos heures de service {type}",
+    "types": {
+      "mobile": "mobile",
+      "studio": "en studio"
+    },
+    "days": {
+      "monday": "Lundi",
+      "tuesday": "Mardi",
+      "wednesday": "Mercredi",
+      "thursday": "Jeudi",
+      "friday": "Vendredi",
+      "saturday": "Samedi",
+      "sunday": "Dimanche"
+    },
+    "dayOff": "Jour de repos",
+    "to": "à",
+    "continue": "Continuer",
+    "saving": "Enregistrement..."
+  },
+  "availability": {
+    "badge": "Paramètres de réservation",
+    "title": "Votre disponibilité",
+    "bookingWindow": {
+      "title": "Fenêtre de réservation anticipée",
+      "options": {
+        "1m": "1 Mois",
+        "2m": "2 Mois",
+        "3m": "3 Mois",
+        "6m": "6 Mois",
+        "1y": "1 An",
+        "18m": "18 Mois"
+      }
+    },
+    "minimumNotice": {
+      "title": "Préavis minimum requis",
+      "options": {
+        "4h": "4 Heures",
+        "6h": "6 Heures",
+        "24h": "24 Heures",
+        "2d": "2 Jours",
+        "1w": "1 Semaine"
+      }
+    },
+    "rescheduleWindow": {
+      "title": "Fenêtre de replanification",
+      "description": "Les clients ne peuvent pas replanifier ou annuler après la fin de cette fenêtre",
+      "options": {
+        "4h": "4 Heures",
+        "6h": "6 Heures",
+        "24h": "24 Heures",
+        "2d": "2 Jours",
+        "1w": "1 Semaine"
+      }
+    },
+    "save": "Enregistrer"
+  }
+}

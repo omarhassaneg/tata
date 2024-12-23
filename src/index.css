@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --safe-area-inset-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+html {
+  height: -webkit-fill-available;
+}
+
+body {
+  min-height: 100dvh;
+  min-height: -webkit-fill-available;
+  @apply bg-background text-primary transition-colors duration-200;
+}
+
+.pb-safe {
+  padding-bottom: var(--safe-area-inset-bottom);
+}
+
+/* Improve touch targets on mobile */
+@media (max-width: 768px) {
+  button, 
+  [role="button"],
+  input,
+  select,
+  textarea {
+    font-size: 16px; /* Prevent iOS zoom */
+    min-height: 44px; /* iOS minimum touch target size */
+  }
+}
+
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --text-primary: #0F1C2E;
+    --text-secondary: rgba(15, 28, 46, 0.8);
+  }
+
+  .dark {
+    --background: #0F1C2E;
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.8);
+  }
+}

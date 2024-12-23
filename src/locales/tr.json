@@ -1,0 +1,258 @@
+{
+  "auth": {
+    "title": "Giriş yap veya Kaydol",
+    "subtitle": "İşletmenizi yönetmek için hesap oluşturun veya giriş yapın",
+    "continueWithEmail": "E-posta ile devam et",
+    "continueWithPhone": "Telefon ile devam et",
+    "continueWithGoogle": "Google ile devam et",
+    "continueWithApple": "Apple ile devam et",
+    "or": "VEYA",
+    "phoneNumber": "Telefon numarası",
+    "emailAddress": "E-posta Adresi",
+    "continue": "Devam et",
+    "pleaseWait": "Lütfen bekleyin..."
+  },
+  "signup": {
+    "businessName": {
+      "title": "İşletmenizin adı nedir?",
+      "placeholder": "İşletme adını girin (isteğe bağlı)",
+      "hint": "Emin değilseniz daha sonra ekleyebilirsiniz"
+    },
+    "firstName": {
+      "title": "Adınız nedir?",
+      "placeholder": "Adınızı girin"
+    },
+    "lastName": {
+      "title": "Soyadınız nedir?",
+      "placeholder": "Soyadınızı girin"
+    },
+    "email": {
+      "title": "E-posta adresiniz nedir?",
+      "placeholder": "E-posta adresinizi girin"
+    },
+    "instagram": {
+      "title": "Instagram kullanıcı adınız nedir?",
+      "placeholder": "@isletmeniz"
+    },
+    "complete": "Tamamla",
+    "continue": "Devam et",
+    "validation": {
+      "required": "Bu alan zorunludur",
+      "email": "Lütfen geçerli bir e-posta adresi girin"
+    }
+  },
+  "verification": {
+    "phone": {
+      "title": "Telefonunuzu Doğrulayın",
+      "message": "Doğrulama kodu {phone} numarasına gönderildi",
+      "socialMessage": "Doğrulama kodu telefon numaranıza gönderildi"
+    },
+    "email": {
+      "title": "E-postanızı Doğrulayın",
+      "message": "{email} adresine gönderilen 4 haneli kodu girin"
+    },
+    "common": {
+      "codeExpires": "Kod {seconds} saniye içinde sona erecek",
+      "resendCode": "Kodu Tekrar Gönder"
+    }
+  },
+  "services": {
+    "title": "Sunduğunuz Hizmetleri Seçin!",
+    "subtitle": "Sunduğunuz hizmetleri seçin. Daha sonra hizmet ekleyip çıkarabilirsiniz.",
+    "categories": {
+      "makeup": "Makyaj",
+      "nails": "Tırnak",
+      "sprayTan": "Sprey Bronzluk",
+      "hair": "Saç",
+      "waxing": "Epilasyon",
+      "esthetics": "Estetik",
+      "henna": "Kına",
+      "eyelashes": "Kirpik",
+      "eyelashesEyebrows": "Kirpik Kaş",
+      "hairstyling": "Saç Şekillendirme",
+      "barber": "Berber",
+      "wedding": "Düğün"
+    },
+    "continue": "Devam et",
+    "saving": "Kaydediliyor..."
+  },
+  "location": {
+    "title": "Hizmetleri Nerede Sunuyorsunuz?",
+    "subtitle": "Hizmetlerinizi nerede sunmak istediğinizi seçin. Mobil olabilir, stüdyodan çalışabilir veya her ikisini de yapabilirsiniz.",
+    "mobile": {
+      "title": "Mobil Hizmetler",
+      "description": "Müşterilerinizin konumuna gidin"
+    },
+    "studio": {
+      "title": "Stüdyo Hizmetleri",
+      "description": "Müşteriler size gelsin"
+    },
+    "continue": "Devam et",
+    "saving": "Kaydediliyor..."
+  },
+  "address": {
+    "title": "Baz Adresinizi Girin",
+    "subtitle": "Stüdyonuzun konumunu veya mobil hizmetler için başlangıç noktanızı ekleyin. Bu, seyahat mesafelerini doğru hesaplamamıza yardımcı olur.",
+    "searchPlaceholder": "Adres ara...",
+    "billingAddress": {
+      "same": "Fatura adresi baz adres ile aynı",
+      "title": "Fatura Adresi",
+      "searchPlaceholder": "Fatura adresi ara..."
+    },
+    "continue": "Devam et",
+    "saving": "Kaydediliyor...",
+    "validation": {
+      "selectAddress": "Lütfen önerilerden geçerli bir adres seçin",
+      "selectBilling": "Lütfen önerilerden geçerli bir fatura adresi seçin"
+    }
+  },
+  "serviceArea": {
+    "title": "Hizmet Alanınız",
+    "subtitle": "Sektör standartlarına göre bazı önerilen ayarlar belirledik. Bu değerleri işletmenizin ihtiyaçlarına göre özelleştirebilirsiniz.",
+    "radius": {
+      "title": "km yarıçap",
+      "description": "{address} çevresindeki hizmet alanı"
+    },
+    "travelFee": {
+      "title": "/ km",
+      "description": "Km başına yol ücreti"
+    },
+    "minimumFee": {
+      "title": "minimum yol ücreti",
+      "description": "Mesafeden bağımsız"
+    },
+    "minimumSpend": {
+      "title": "minimum harcama",
+      "description": "Rezervasyon başına minimum harcama"
+    },
+    "continue": "Devam et",
+    "saving": "Kaydediliyor..."
+  },
+  "success": {
+    "title": "Temel Bilgiler Tamamlandı",
+    "subtitle": "Şimdi ayarlarınızı gözden geçirelim",
+    "continue": "Devam et"
+  },
+  "serviceConfirmation": {
+    "badge": "Hizmetler Eklendi",
+    "title": "Hizmetleriniz",
+    "addedToProfile": "Profilinize eklendi",
+    "pricing": {
+      "value": "Sektör Standart Fiyatlandırması",
+      "label": "Fiyatlandırma uygulandı"
+    },
+    "addons": {
+      "value": "Ek hizmetler eklendi",
+      "label": "Süreleri ve fiyatları daha sonra ayarlayın"
+    },
+    "continue": "Devam et"
+  },
+  "policies": {
+    "badge": "İşletme Koruması",
+    "title": "Politikalar ve Feragatnameler",
+    "subtitle": "İşletmeniz için kapsamlı politikalar ve feragatnameler oluşturduk, böylece sıfırdan başlamanıza gerek kalmaz. Bunları ihtiyaçlarınıza göre özelleştirebilirsiniz.",
+    "stats": {
+      "policies": {
+        "value": "10 Politika",
+        "label": "Önceden yazılmış işletme politikaları"
+      },
+      "waivers": {
+        "value": "7 Feragatname",
+        "label": "Kullanıma hazır koruma anlaşmaları"
+      }
+    },
+    "continue": "Devam et"
+  },
+  "schedule": {
+    "badge": "Çalışma Saatleri",
+    "title": "Programınız",
+    "subtitle": "{type} hizmet saatlerinizi ayarlayın",
+    "types": {
+      "mobile": "mobil",
+      "studio": "stüdyo"
+    },
+    "days": {
+      "monday": "Pazartesi",
+      "tuesday": "Salı",
+      "wednesday": "Çarşamba",
+      "thursday": "Perşembe",
+      "friday": "Cuma",
+      "saturday": "Cumartesi",
+      "sunday": "Pazar"
+    },
+    "dayOff": "İzin günü",
+    "to": "ile",
+    "continue": "Devam et",
+    "saving": "Kaydediliyor..."
+  },
+  "balanceReminder": {
+    "badge": "Bakiye Hatırlatıcısı",
+    "title": "Bakiye Ödeme Hatırlatıcısı",
+    "subtitle": "Müşteriler ilk ödeme hatırlatıcısını ne zaman almalı?",
+    "options": {
+      "after": {
+        "label": "Randevu tamamlandıktan sonra",
+        "description": "Hizmet tamamlandığında hatırlatma gönder"
+      },
+      "24h": {
+        "label": "24 Saat Önce",
+        "description": "Son dakika onayları için en iyisi"
+      },
+      "3d": {
+        "label": "3 Gün Önce",
+        "description": "Çoğu hizmet için önerilir"
+      },
+      "1w": {
+        "label": "1 Hafta Önce",
+        "description": "Standart randevular için uygun"
+      },
+      "2w": {
+        "label": "2 Hafta Önce",
+        "description": "Premium hizmetler için ideal"
+      },
+      "1m": {
+        "label": "1 Ay Önce",
+        "description": "Önemli etkinlikler için mükemmel"
+      }
+    },
+    "save": "Kaydet",
+    "saving": "Kaydediliyor..."
+  },
+  "availability": {
+    "badge": "Rezervasyon Ayarları",
+    "title": "Müsaitlik Durumunuz",
+    "bookingWindow": {
+      "title": "Ön rezervasyon penceresi",
+      "options": {
+        "1m": "1 Ay",
+        "2m": "2 Ay",
+        "3m": "3 Ay",
+        "6m": "6 Ay",
+        "1y": "1 Yıl",
+        "18m": "18 Ay"
+      }
+    },
+    "minimumNotice": {
+      "title": "Gerekli minimum bildirim süresi",
+      "options": {
+        "4h": "4 Saat",
+        "6h": "6 Saat",
+        "24h": "24 Saat",
+        "2d": "2 Gün",
+        "1w": "1 Hafta"
+      }
+    },
+    "rescheduleWindow": {
+      "title": "Yeniden planlama penceresi",
+      "description": "Müşteriler bu pencere kapandıktan sonra yeniden planlama veya iptal yapamaz",
+      "options": {
+        "4h": "4 Saat",
+        "6h": "6 Saat",
+        "24h": "24 Saat",
+        "2d": "2 Gün",
+        "1w": "1 Hafta"
+      }
+    },
+    "save": "Kaydet"
+  }
+}

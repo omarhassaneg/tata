@@ -1,0 +1,161 @@
+{
+  "auth": {
+    "title": "Iniciar sesión o Registrarse",
+    "subtitle": "Crea una cuenta o inicia sesión para gestionar tu negocio",
+    "continueWithEmail": "Continuar con correo electrónico",
+    "continueWithPhone": "Continuar con teléfono",
+    "continueWithGoogle": "Continuar con Google",
+    "continueWithApple": "Continuar con Apple",
+    "or": "O",
+    "phoneNumber": "Número de teléfono",
+    "emailAddress": "Correo electrónico",
+    "continue": "Continuar",
+    "pleaseWait": "Por favor espere..."
+  },
+  "location": {
+    "title": "¿Dónde ofreces tus servicios?",
+    "subtitle": "Selecciona dónde te gustaría proporcionar tus servicios. Puedes ser móvil, trabajar desde un estudio, o ambos.",
+    "mobile": {
+      "title": "Servicios Móviles",
+      "description": "Viaja a la ubicación de tus clientes"
+    },
+    "studio": {
+      "title": "Servicios en Estudio",
+      "description": "Los clientes vienen a tu ubicación"
+    },
+    "continue": "Continuar",
+    "saving": "Guardando..."
+  },
+  "address": {
+    "title": "Ingresa tu dirección base",
+    "subtitle": "Agrega la ubicación de tu estudio o punto de partida para servicios móviles. Esto nos ayuda a calcular las distancias de viaje con precisión.",
+    "searchPlaceholder": "Buscar dirección...",
+    "billingAddress": {
+      "same": "La dirección de facturación es la misma que la dirección base",
+      "title": "Dirección de facturación",
+      "searchPlaceholder": "Buscar dirección de facturación..."
+    },
+    "continue": "Continuar",
+    "saving": "Guardando...",
+    "validation": {
+      "selectAddress": "Por favor selecciona una dirección válida de las sugerencias",
+      "selectBilling": "Por favor selecciona una dirección de facturación válida de las sugerencias"
+    }
+  },
+  "serviceArea": {
+    "title": "Tu cobertura",
+    "subtitle": "Hemos configurado algunos ajustes recomendados basados en los estándares de la industria. Puedes personalizar estos valores según las necesidades de tu negocio.",
+    "radius": {
+      "title": "km de radio",
+      "description": "Área de servicio alrededor de {address}"
+    },
+    "travelFee": {
+      "title": "/ km",
+      "description": "Tarifa de viaje por km"
+    },
+    "minimumFee": {
+      "title": "tarifa mínima de viaje",
+      "description": "Independientemente de la distancia"
+    },
+    "minimumSpend": {
+      "title": "gasto mínimo",
+      "description": "Gasto mínimo por reserva"
+    },
+    "continue": "Continuar",
+    "saving": "Guardando..."
+  },
+  "success": {
+    "title": "Información básica completada",
+    "subtitle": "Ahora, revisemos tu configuración",
+    "continue": "Continuar"
+  },
+  "serviceConfirmation": {
+    "badge": "Servicios agregados",
+    "title": "Tus servicios",
+    "addedToProfile": "Agregado a tu perfil",
+    "pricing": {
+      "value": "Precios estándar de la industria",
+      "label": "Precios aplicados"
+    },
+    "addons": {
+      "value": "Complementos agregados",
+      "label": "Ajusta duraciones y precios más tarde"
+    },
+    "continue": "Continuar"
+  },
+  "policies": {
+    "badge": "Protección del negocio",
+    "title": "Políticas y exenciones",
+    "subtitle": "Hemos creado políticas y exenciones completas para tu negocio, para que no tengas que empezar desde cero. Puedes personalizarlas según tus necesidades.",
+    "stats": {
+      "policies": {
+        "value": "10 Políticas",
+        "label": "Políticas comerciales preescritas"
+      },
+      "waivers": {
+        "value": "7 Exenciones",
+        "label": "Acuerdos de protección listos para usar"
+      }
+    },
+    "continue": "Continuar"
+  },
+  "schedule": {
+    "badge": "Horario laboral",
+    "title": "Tu horario",
+    "subtitle": "Establece tus horas de servicio {type}",
+    "types": {
+      "mobile": "móvil",
+      "studio": "en estudio"
+    },
+    "days": {
+      "monday": "Lunes",
+      "tuesday": "Martes",
+      "wednesday": "Miércoles",
+      "thursday": "Jueves",
+      "friday": "Viernes",
+      "saturday": "Sábado",
+      "sunday": "Domingo"
+    },
+    "dayOff": "Día libre",
+    "to": "a",
+    "continue": "Continuar",
+    "saving": "Guardando..."
+  },
+  "availability": {
+    "badge": "Configuración de reservas",
+    "title": "Tu disponibilidad",
+    "bookingWindow": {
+      "title": "Ventana de reserva anticipada",
+      "options": {
+        "1m": "1 Mes",
+        "2m": "2 Meses",
+        "3m": "3 Meses",
+        "6m": "6 Meses",
+        "1y": "1 Año",
+        "18m": "18 Meses"
+      }
+    },
+    "minimumNotice": {
+      "title": "Aviso mínimo requerido",
+      "options": {
+        "4h": "4 Horas",
+        "6h": "6 Horas",
+        "24h": "24 Horas",
+        "2d": "2 Días",
+        "1w": "1 Semana"
+      }
+    },
+    "rescheduleWindow": {
+      "title": "Ventana de reprogramación",
+      "description": "Los clientes no pueden reprogramar o cancelar después de que esta ventana finalice",
+      "options": {
+        "4h": "4 Horas",
+        "6h": "6 Horas",
+        "24h": "24 Horas",
+        "2d": "2 Días",
+        "1w": "1 Semana"
+      }
+    },
+    "save": "Guardar"
+  }
+}
