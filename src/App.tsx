@@ -38,9 +38,15 @@ import ContactDisplaySettings from './components/ContactDisplaySettings';
 import { useOnboarding } from './context/OnboardingContext';
 
 function OnboardingFlow() {
-  const { state } = useOnboarding();
+  const { state, dispatch } = useOnboarding();
 
   const renderStep = () => {
+    // Skip ServiceArea step if studio-only is selected
+    if (state.step === 8 && state.serviceLocation.type === 'studio') {
+      dispatch({ type: 'SET_STEP', payload: 9 });
+      return null;
+    }
+
     switch (state.step) {
       case 1:
         return <AuthOptions />;
