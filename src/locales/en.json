@@ -328,6 +328,25 @@
     "saving": "Saving...",
     "error": "Failed to save headline. Please try again."
   },
+  "websiteSubheadline": {
+    "badge": "Subheadline",
+    "title": "Add Your Subheadline",
+    "subtitle": "Your subheadline provides additional context and supports your main message. Use it to highlight key benefits or unique selling points.",
+    "examples": {
+      "title": "Example Subheadlines:",
+      "example1": "Bringing out your natural beauty for weddings, events, and photoshoots",
+      "example2": "Creating stunning looks that make you feel confident and beautiful",
+      "example3": "Personalized beauty services delivered with expertise and care"
+    },
+    "input": {
+      "label": "Subheadline",
+      "placeholder": "Enter your subheadline...",
+      "characters": "120 characters"
+    },
+    "save": "Save",
+    "saving": "Saving...",
+    "error": "Failed to save subheadline. Please try again."
+  },
   "contactDisplay": {
     "badge": "Contact Display",
     "title": "Contact Information",

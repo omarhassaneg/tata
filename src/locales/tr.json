@@ -328,6 +328,25 @@
     "subtitle": "Şimdi, web sitenizi 1 dakikadan kısa sürede tasarlayalım",
     "continue": "Devam et"
   },
+  "websiteSubheadline": {
+    "badge": "Alt Başlık",
+    "title": "Alt Başlığınızı Ekleyin",
+    "subtitle": "Alt başlığınız ana mesajınıza ek bağlam sağlar ve onu destekler. Temel faydaları veya benzersiz satış noktalarını vurgulamak için kullanın.",
+    "examples": {
+      "title": "Alt Başlık Örnekleri:",
+      "example1": "Düğünler, etkinlikler ve fotoğraf çekimleri için doğal güzelliğinizi ortaya çıkarıyoruz",
+      "example2": "Size güven ve güzellik katan etkileyici görünümler yaratıyoruz",
+      "example3": "Uzmanlık ve özenle sunulan kişiselleştirilmiş güzellik hizmetleri"
+    },
+    "input": {
+      "label": "Alt Başlık",
+      "placeholder": "Alt başlığınızı girin...",
+      "characters": "120 karakter"
+    },
+    "save": "Kaydet",
+    "saving": "Kaydediliyor...",
+    "error": "Alt başlık kaydedilemedi. Lütfen tekrar deneyin."
+  },
   "contactDisplay": {
     "badge": "İletişim Bilgileri Görünümü",
     "title": "İletişim Bilgileri",

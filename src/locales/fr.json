@@ -328,6 +328,25 @@
     "subtitle": "Maintenant, concevons votre site web en moins d'une minute",
     "continue": "Continuer"
   },
+  "websiteSubheadline": {
+    "badge": "Sous-titre",
+    "title": "Ajoutez votre sous-titre",
+    "subtitle": "Votre sous-titre fournit un contexte supplémentaire et soutient votre message principal. Utilisez-le pour mettre en valeur les avantages clés ou les points de vente uniques.",
+    "examples": {
+      "title": "Exemples de sous-titres :",
+      "example1": "Sublimer votre beauté naturelle pour les mariages, événements et séances photos",
+      "example2": "Créer des looks magnifiques qui vous donnent confiance et beauté",
+      "example3": "Services de beauté personnalisés fournis avec expertise et soin"
+    },
+    "input": {
+      "label": "Sous-titre",
+      "placeholder": "Entrez votre sous-titre...",
+      "characters": "120 caractères"
+    },
+    "save": "Enregistrer",
+    "saving": "Enregistrement...",
+    "error": "Échec de l'enregistrement du sous-titre. Veuillez réessayer."
+  },
   "contactDisplay": {
     "badge": "Affichage des Contacts",
     "title": "Informations de Contact",

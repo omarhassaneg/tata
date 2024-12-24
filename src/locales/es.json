@@ -328,6 +328,25 @@
     "subtitle": "Ahora, diseñemos tu sitio web en menos de 1 minuto",
     "continue": "Continuar"
   },
+  "websiteSubheadline": {
+    "badge": "Subtítulo",
+    "title": "Añade tu Subtítulo",
+    "subtitle": "Tu subtítulo proporciona contexto adicional y apoya tu mensaje principal. Úsalo para destacar beneficios clave o puntos de venta únicos.",
+    "examples": {
+      "title": "Ejemplos de Subtítulos:",
+      "example1": "Resaltando tu belleza natural para bodas, eventos y sesiones fotográficas",
+      "example2": "Creando looks impresionantes que te hacen sentir segura y hermosa",
+      "example3": "Servicios de belleza personalizados brindados con experiencia y cuidado"
+    },
+    "input": {
+      "label": "Subtítulo",
+      "placeholder": "Ingresa tu subtítulo...",
+      "characters": "120 caracteres"
+    },
+    "save": "Guardar",
+    "saving": "Guardando...",
+    "error": "Error al guardar el subtítulo. Por favor, inténtalo de nuevo."
+  },
   "contactDisplay": {
     "badge": "Mostrar Contacto",
     "title": "Información de Contacto",
