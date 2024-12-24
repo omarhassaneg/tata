@@ -254,5 +254,13 @@
       }
     },
     "save": "Enregistrer"
+  },
+  "websiteThemeSelection": {
+    "websiteTheme": "Thème du Site Web",
+    "title": "Choisissez votre Style",
+    "saving": "Enregistrement...",
+    "save": "Enregistrer",
+    "error": "Erreur lors de l'enregistrement du thème. Veuillez réessayer."
   }
+  
 }

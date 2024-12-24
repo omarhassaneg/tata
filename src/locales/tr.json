@@ -254,5 +254,13 @@
       }
     },
     "save": "Kaydet"
+  },
+  "websiteThemeSelection": {
+    "websiteTheme": "Web Sitesi Teması",
+    "title": "Tarzınızı Seçin",
+    "saving": "Kaydediliyor...",
+    "save": "Kaydet",
+    "error": "Tema kaydedilirken hata oluştu. Lütfen tekrar deneyin."
   }
+  
 }

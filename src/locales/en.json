@@ -244,7 +244,7 @@
     },
     "rescheduleWindow": {
       "title": "Reschedule window",
-      "description": "Clients won’t be able to reschedule or cancel after this window closes",
+      "description": "Clients won't be able to reschedule or cancel after this window closes",
       "options": {
         "4h": "4 Hours",
         "6h": "6 Hours",
@@ -254,5 +254,12 @@
       }
     },
     "save": "Save"
+  },
+  "websiteThemeSelection": {
+    "websiteTheme": "Website Theme",
+    "title": "Choose Your Style",
+    "saving": "Saving...",
+    "save": "Save",
+    "error": "Failed to save theme. Please try again."
   }
 }

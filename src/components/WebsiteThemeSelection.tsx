@@ -7,6 +7,8 @@ import { fadeIn, staggerChildren } from './ui/animations';
 import { saveWebsiteTheme } from '../services/api';
 import { useSwipeable, SwipeableProps } from 'react-swipeable';
 import { Layout } from './ui/Layout';
+import { Button } from './ui/Button';
+import { useLanguage } from '../context/LanguageContext';
 
 interface ThemePreviewProps {
   name: string;
@@ -79,6 +81,7 @@ const themes = [
 
 export default function WebsiteThemeSelection() {
   const { state, dispatch } = useOnboarding();
+  const { translations } = useLanguage();
   const [selectedTheme, setSelectedTheme] = React.useState(state.websiteTheme || '');
   const [currentIndex, setCurrentIndex] = React.useState(0);
   const [loading, setLoading] = React.useState(false);
@@ -120,7 +123,7 @@ export default function WebsiteThemeSelection() {
         dispatch({ type: 'SET_STEP', payload: 17 });
       } catch (err) {
         console.error('Error saving theme:', err);
-        setError('Failed to save theme. Please try again.');
+        setError(translations?.websiteThemeSelection?.error || 'Failed to save theme. Please try again.');
       } finally {
         setLoading(false);
       }
@@ -135,6 +138,7 @@ export default function WebsiteThemeSelection() {
     preventScrollOnSwipe: true,
     trackMouse: true
   } as SwipeableProps);
+
   return (
     <Layout maxWidth="2xl">
       <motion.div 
@@ -148,48 +152,52 @@ export default function WebsiteThemeSelection() {
             className="inline-flex items-center gap-2 bg-primary-gold/10 text-primary-gold px-4 py-2 rounded-full mb-4"
           >
             <Palette className="w-4 h-4" />
-            <span className="text-sm font-medium">Website Theme</span>
+            <span className="text-sm font-medium">
+              {translations?.websiteThemeSelection?.websiteTheme || "Website Theme"}
+            </span>
           </motion.div>
           
-          <Heading>Choose Your Style</Heading>
+          <Heading>
+            {translations?.websiteThemeSelection?.title || "Choose Your Style"}
+          </Heading>
         </div>
 
-      <div className="mb-20">
-        <motion.div 
-          variants={staggerChildren}
-          className="relative"
-          onClick={(e: React.MouseEvent) => {
-            e.preventDefault();
-            setSelectedTheme(selectedTheme === currentTheme.id ? '' : currentTheme.id);
-          }}
-          {...swipeHandlers}
-        >
-          <ThemePreview
-            name={currentTheme.name}
-            preview={currentTheme.preview}
-            selected={selectedTheme === currentTheme.id}
-          />
+        <div className="mb-20">
+          <motion.div 
+            variants={staggerChildren}
+            className="relative"
+            onClick={(e: React.MouseEvent) => {
+              e.preventDefault();
+              setSelectedTheme(selectedTheme === currentTheme.id ? '' : currentTheme.id);
+            }}
+            {...swipeHandlers}
+          >
+            <ThemePreview
+              name={currentTheme.name}
+              preview={currentTheme.preview}
+              selected={selectedTheme === currentTheme.id}
+            />
 
-          <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 flex justify-between px-2">
-            <button
-              onClick={handlePrevious}
-              disabled={currentIndex === 0}
-              className={`p-4 rounded-xl bg-white/95 dark:bg-white/30 backdrop-blur-sm shadow-lg transition-all hover:scale-105
-                ${currentIndex === 0 ? 'opacity-50 cursor-not-allowed' : 'hover:bg-white dark:hover:bg-white/40'}`}
-            >
-              <ArrowLeft className="w-8 h-8 text-gray-900 dark:text-white" />
-            </button>
-            <button
-              onClick={handleNext}
-              disabled={currentIndex === themes.length - 1}
-              className={`p-4 rounded-xl bg-white/95 dark:bg-white/30 backdrop-blur-sm shadow-lg transition-all hover:scale-105
-                ${currentIndex === themes.length - 1 ? 'opacity-50 cursor-not-allowed' : 'hover:bg-white dark:hover:bg-white/40'}`}
-            >
-              <ArrowRight className="w-8 h-8 text-gray-900 dark:text-white" />
-            </button>
-          </div>
-        </motion.div>
-      </div>
+            <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 flex justify-between px-2">
+              <button
+                onClick={handlePrevious}
+                disabled={currentIndex === 0}
+                className={`p-4 rounded-xl bg-white/95 dark:bg-white/30 backdrop-blur-sm shadow-lg transition-all hover:scale-105
+                  ${currentIndex === 0 ? 'opacity-50 cursor-not-allowed' : 'hover:bg-white dark:hover:bg-white/40'}`}
+              >
+                <ArrowLeft className="w-8 h-8 text-gray-900 dark:text-white" />
+              </button>
+              <button
+                onClick={handleNext}
+                disabled={currentIndex === themes.length - 1}
+                className={`p-4 rounded-xl bg-white/95 dark:bg-white/30 backdrop-blur-sm shadow-lg transition-all hover:scale-105
+                  ${currentIndex === themes.length - 1 ? 'opacity-50 cursor-not-allowed' : 'hover:bg-white dark:hover:bg-white/40'}`}
+              >
+                <ArrowRight className="w-8 h-8 text-gray-900 dark:text-white" />
+              </button>
+            </div>
+          </motion.div>
+        </div>
 
         <motion.div
           variants={fadeIn}
@@ -201,7 +209,7 @@ export default function WebsiteThemeSelection() {
             disabled={loading || !selectedTheme}
             className="w-full"
           >
-            {loading ? 'Saving...' : 'Save'}
+            {loading ? translations?.websiteThemeSelection?.saving || 'Saving...' : translations?.websiteThemeSelection?.save || 'Save'}
           </Button>
           {error && (
             <p className="text-sm text-red-500 text-center">{error}</p>
