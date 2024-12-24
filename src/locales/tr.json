@@ -364,5 +364,190 @@
     "save": "Kaydet",
     "saving": "Kaydediliyor...",
     "error": "Ayarlar kaydedilirken hata oluştu. Lütfen tekrar deneyin."
+  },
+  "websitePortfolio": {
+    "badge": "Portfolyo Görselleri",
+    "title": "En İyi Çalışmalarınızı Ekleyin",
+    "subtitle": "Becerilerinizi ve tarzınızı göstermek için çalışmalarınızın fotoğraflarını yükleyin. Her görseli kırpabilir ve ayarlayabilirsiniz. Bu adım isteğe bağlıdır.",
+    "upload": {
+      "placeholder": "Görsel Ekle",
+      "helperText": "PNG veya JPG (maksimum 10MB)"
+    },
+    "cropModal": {
+      "title": "Görseli Kırp",
+      "done": "Tamam"
+    },
+    "saving": "Kaydediliyor...",
+    "save": "Kaydet",
+    "skip": "Atla",
+    "error": "Portfolyo görselleri kaydedilirken hata oluştu. Lütfen tekrar deneyin."
+  },
+  "marketplaceVerification": {
+    "badge": "Pazar Yeri Doğrulaması",
+    "title": "Onaylı Satıcılarımıza Katılın",
+    "subtitle": "Glamic pazar yerine katılmak ve yüksek değerli rezervasyonlara erişim kazanmak, özel avantajlara sahip onaylı satıcı olma fırsatı için profil fotoğrafınızı ekleyin.",
+    "requirements": {
+      "profilePhoto": {
+        "title": "Gerekli: Profesyonel Profil Fotoğrafı",
+        "description": "Pazar yerinde listelenebilmek için net bir fotoğrafınızı yükleyin"
+      },
+      "verifiedBadge": {
+        "title": "Onaylı Rozet Avantajları",
+        "description": "Pazar yerinden rezervasyonlar alın, daha yüksek görünürlük ve özel özellikler kazanın. Yeterlilik kazanıldığında kimlik doğrulaması ve geçmiş kontrolü gereklidir."
+      },
+      "badgeRequirements": {
+        "title": "Onaylı Rozet Gereksinimleri",
+        "description": "Düzenli müşteri rezervasyonlarıyla 6 ay boyunca 4 yıldızın üzerinde puan ortalaması tutturun. Yeterlilik kazanıldığında kimlik doğrulaması ve geçmiş kontrolünü tamamlayın."
+      }
+    },
+    "photoGuidelines": {
+      "title": "Profil fotoğrafınız potansiyel müşterilerle güven oluşturmak için çok önemlidir. Fotoğrafınızın şu özelliklere sahip olduğundan emin olun:",
+      "items": [
+        "Yüzünüzü net göstersin",
+        "İyi aydınlatılmış olsun",
+        "Açık, düz bir arka plan kullanın",
+        "Profesyonel görünsün",
+        "Güncel ve gerçekçi olsun"
+      ]
+    },
+    "securityNotice": "Herkesin güvenliği için, yerel kolluk kuvvetleriyle işbirliği yapıyoruz ve nadir durumlarda soruşturma veya yasal işlemler için hesap bilgilerini paylaşabiliriz.",
+    "upload": {
+      "placeholder": "Profil fotoğrafınızı yükleyin",
+      "helperText": "PNG veya JPG (maksimum 5MB)"
+    },
+    "verificationStatus": {
+      "withPhoto": "Profiliniz incelendikten sonra pazar yerinde listelenecek. Premium avantajları ve arttırılmış görünürlüğü açmak için onaylı rozetinizi kazanın.",
+      "withoutPhoto": "Pazar yerinde listelenmek için profil fotoğrafı ekleyin."
+    },
+    "buttons": {
+      "continue": "Devam et",
+      "skip": "Atla",
+      "saving": "Kaydediliyor..."
+    },
+    "error": "Profil fotoğrafı kaydedilirken hata oluştu. Lütfen tekrar deneyin."
+  },
+  "websitePaymentsSuccess": {
+    "title": "Web Sitesi Tamamlandı",
+    "subtitle": "Şimdi, ödemeleri ayarlayalım",
+    "continue": "Devam et"
+  },
+  "depositSettings": {
+    "badge": "Depozito Ayarları",
+    "title": "Depozito Tutarını Seçin",
+    "subtitle": "Rezervasyonlar için gereken depozito yüzdesini belirleyin. Bu tutar, müşteriler hizmetlerinizi rezerve ettiğinde peşin olarak tahsil edilecektir.",
+    "options": {
+      "noDeposit": "Depozito Yok",
+      "custom": "Özel"
+    },
+    "saving": "Kaydediliyor...",
+    "save": "Kaydet",
+    "error": "Ayarlar kaydedilirken hata oluştu. Lütfen tekrar deneyin."
+  },
+  "websiteBio": {
+    "badge": "Profesyonel Biyografi",
+    "title": "Hikayenizi Anlatın",
+    "subtitle": "Uzmanlığınızı sergileyen ve potansiyel müşterilerle bağlantı kuran ikna edici bir biyografi yazın.",
+    "exampleSection": {
+      "title": "Örnek Biyografi:",
+      "content": "8 yılı aşkın profesyonel makyaj sanatçılığı deneyimimle, düğünler, özel etkinlikler ve fotoğraf çekimleri için etkileyici görünümler yaratmada uzmanlaştım. Yaklaşımım, doğal güzelliğinizi ortaya çıkarmak için klasik teknikleri güncel trendlerle birleştirir. İster hayalinizdeki düğün için planlama yapıyor olun, ister önemli bir fotoğraf çekimine hazırlanıyor olun, size en iyi görünümü ve hissi yaşatmak için buradayım"
+    },
+    "input": {
+      "placeholder": "Profesyonel biyografinizi buraya yazın...",
+      "charactersRemaining": "karakter kaldı"
+    },
+    "saving": "Kaydediliyor...",
+    "save": "Kaydet",
+    "error": "Biyografi kaydedilirken hata oluştu. Lütfen tekrar deneyin."
+  },
+  "cashPaymentSettings": {
+    "badge": "Nakit Ödemeler",
+    "title": "Nakit Ödeme Talimatları",
+    "subtitle": "Müşterilerin rezervasyondan sonra SMS ile alacağı ödeme talimatlarını özelleştirin. Depozito tutarı mesaja otomatik olarak eklenecektir.",
+    "countryTag": {
+      "us": "ABD Ödeme Talimatları",
+      "other": "Kanada Ödeme Talimatları"
+    },
+    "input": {
+      "label": "Ödeme Talimatları",
+      "placeholder": "Ödeme talimatlarınızı girin..."
+    },
+    "saving": "Kaydediliyor...",
+    "save": "Kaydet",
+    "error": "Ayarlar kaydedilirken hata oluştu. Lütfen tekrar deneyin."
+  },
+  "subscriptionPlans": {
+    "badge": "Abonelik Planı",
+    "title": "Bugün Başlayın",
+    "subtitle": "Tüm özelliklere erişin ve Glamic ile işletmenizi büyütmeye başlayın",
+    "plans": {
+      "yearly": {
+        "title": "Yıllık Plan",
+        "subtitle": "Yıllık faturalandırma",
+        "savings": "%20 Tasarruf"
+      },
+      "monthly": {
+        "title": "Aylık Plan",
+        "subtitle": "Aylık faturalandırma"
+      }
+    },
+    "features": {
+      "booking": "İşletmenizi büyütmek için gelişmiş rezervasyon araçları",
+      "automation": "Zamandan tasarruf için otomatik yönetim görevleri",
+      "security": "Profesyonel web sitesi ve güvenli ödemeler"
+    },
+    "action": {
+      "button": "Bugün Başlayın - Şimdi 0$ Ödeyin",
+      "disclaimer": "İstediğiniz zaman iptal edin. Uzun vadeli taahhüt gerekmez."
+    }
+  },
+  "creditCardPayments": {
+    "badge": "Kart Ödemeleri",
+    "title": "Kart Ödemelerini Kabul Edin",
+    "subtitle": "Müşterilerin kredi kartları, Apple Pay ve daha fazlasıyla güvenli bir şekilde ödeme yapmasına olanak tanıyın. Stripe'ın güvenilir ödeme işleme altyapısı ile desteklenmektedir.",
+    "features": {
+      "cards": {
+        "title": "Kredi ve Banka Kartları",
+        "description": "Tüm büyük kredi ve banka kartlarını güvenle kabul edin"
+      },
+      "digitalWallets": {
+        "title": "Dijital Cüzdanlar",
+        "description": "Apple Pay, Google Pay ve telefonunuzda temassız ödeme"
+      },
+      "financing": {
+        "title": "Affirm Finansmanı",
+        "description": "Müşterilerin ödemeleri kolay taksitlere bölmesine izin verin"
+      },
+      "pricing": {
+        "title": "Basit Fiyatlandırma",
+        "description": "İşlem başına %4. Gizli ücret veya aylık masraf yok"
+      }
+    },
+    "setup": "Kart Ödemelerini Ayarla",
+    "skip": "Şimdilik Atla"
+  },
+  "appDownload": {
+    "badge": "Mobil Uygulama",
+    "title": "Glamic'i İndirin",
+    "subtitle": "Güzellik işletmenizi mobil cihazınızdan yönetmenin geleceğini keşfedin. Web deneyimimiz yakında geliyor!",
+    "downloadButton": "Uygulamayı İndir",
+    "qrCodeInstruction": "QR kodunu mobil cihazınızla tarayın",
+    "availableDevices": "iOS ve Android cihazlar için kullanılabilir"
+  },
+  "subscriptionSuccess": {
+    "title": "Glamic'e Hoş Geldiniz! 🎉",
+    "subtitle": "Profesyonel web siteniz hazır. Müşterilerinizle paylaşın ve rezervasyon almaya başlayın!",
+    "websiteUrl": {
+      "copyTooltip": "Bağlantıyı kopyala",
+      "copied": "Kopyalandı!",
+      "instagramHint": "Instagram biyografinize bu bağlantıyı ekleyerek profilinizden direkt rezervasyon almaya başlayın"
+    },
+    "actions": {
+      "previewWebsite": "Web Sitesi Önizleme",
+      "goToAccount": "Hesaba Git",
+      "accountHint": {
+        "preview": "Hesap erişimini etkinleştirmek için önce web sitenizi önizleyin",
+        "ready": "Takviminize erişin ve işletmenizi yönetin"
+      }
+    }
   }
 }

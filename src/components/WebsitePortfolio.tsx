@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import ReactCrop, { Crop, PixelCrop } from 'react-image-crop';
 import 'react-image-crop/dist/ReactCrop.css';
 import { useOnboarding } from '../context/OnboardingContext';
+import { useLanguage } from '../context/LanguageContext';
 import { Heading, Text } from './ui/Typography';
 import { Button } from './ui/Button';
 import { Image, X, Loader } from 'lucide-react';
@@ -20,6 +21,7 @@ interface PortfolioImage {
 
 export default function WebsitePortfolio() {
   const { dispatch } = useOnboarding();
+  const { translations } = useLanguage();
   const [images, setImages] = useState<PortfolioImage[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -87,14 +89,13 @@ export default function WebsitePortfolio() {
             className="inline-flex items-center gap-2 bg-primary-gold/10 text-primary-gold px-4 py-2 rounded-full mb-4"
           >
             <Image className="w-4 h-4" />
-            <span className="text-sm font-medium">Portfolio Images</span>
+            <span className="text-sm font-medium">{translations?.websitePortfolio?.badge || "Portfolio Images"}</span>
           </motion.div>
           
-          <Heading className="mb-4">Add Your Best Work</Heading>
+          <Heading className="mb-4">{translations?.websitePortfolio?.title || "Add Your Best Work"}</Heading>
           
           <Text className="max-w-md mx-auto">
-            Upload photos of your work to showcase your skills and style.
-            You can crop and adjust each image. This step is optional.
+            {translations?.websitePortfolio?.subtitle || "Upload photos of your work to showcase your skills and style. You can crop and adjust each image. This step is optional."}
           </Text>
         </div>
 
@@ -128,8 +129,8 @@ export default function WebsitePortfolio() {
                   return [...prev, newImage];
                 });
               }}
-              placeholder="Add Image"
-              helperText="PNG or JPG (max 10MB)"
+              placeholder={translations?.websitePortfolio?.upload?.placeholder || "Add Image"}
+              helperText={translations?.websitePortfolio?.upload?.helperText || "PNG or JPG (max 10MB)"}
               aspectRatio="free"
               className="w-full max-w-xs"
               multiple={true}
@@ -161,7 +162,7 @@ export default function WebsitePortfolio() {
           >
             <div className="bg-white rounded-2xl p-6 max-w-2xl w-full">
               <div className="flex justify-between items-center mb-4">
-                <h3 className="text-lg font-semibold">Crop Image</h3>
+                <h3 className="text-lg font-semibold">{translations?.websitePortfolio?.cropModal?.title || "Crop Image"}</h3>
                 <button
                   onClick={() => setSelectedImage(null)}
                   className="p-2 hover:bg-gray-100 rounded-full"
@@ -189,7 +190,7 @@ export default function WebsitePortfolio() {
                   variant="primary"
                   onClick={() => setSelectedImage(null)}
                 >
-                  Done
+                  {translations?.websitePortfolio?.cropModal?.done || "Done"}
                 </Button>
               </div>
             </div>
@@ -206,10 +207,12 @@ export default function WebsitePortfolio() {
               disabled={loading}
               className="w-full"
             >
-              {loading ? 'Saving...' : images.length > 0 ? 'Save' : 'Skip'}
+              {loading ? translations?.websitePortfolio?.saving || 'Saving...' : 
+                images.length > 0 ? translations?.websitePortfolio?.save || 'Save' : 
+                translations?.websitePortfolio?.skip || 'Skip'}
             </Button>
             {error && (
-              <p className="text-sm text-red-500 text-center">{error}</p>
+              <p className="text-sm text-red-500 text-center">{error || translations?.websitePortfolio?.error}</p>
             )}
           </motion.div>
         </motion.div>

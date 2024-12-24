@@ -1,9 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Check, ArrowRight } from 'lucide-react';
+import { Check } from 'lucide-react';
 import { Heading, Text } from './ui/Typography';
 import { Button } from './ui/Button';
 import { useOnboarding } from '../context/OnboardingContext';
+import { useLanguage } from '../context/LanguageContext';
 
 const checkmarkVariants = {
   hidden: { 
@@ -51,6 +52,7 @@ const containerVariants = {
 
 export default function WebsitePaymentsSuccess() {
   const { dispatch } = useOnboarding();
+  const { translations } = useLanguage();
 
   return (
     <div className="min-h-[80vh] flex flex-col items-center justify-center px-4">
@@ -71,11 +73,11 @@ export default function WebsitePaymentsSuccess() {
           className="text-center space-y-6"
         >
           <Heading>
-            Website Completed
+            {translations?.websitePaymentsSuccess?.title || "Website Completed"}
           </Heading>
           
           <Text className="text-gray-600">
-            Now, let's setup payments
+            {translations?.websitePaymentsSuccess?.subtitle || "Now, let's setup payments"}
           </Text>
 
           <motion.div
@@ -87,7 +89,7 @@ export default function WebsitePaymentsSuccess() {
               onClick={() => dispatch({ type: 'SET_STEP', payload: 26 })}
               className="w-full"
             >
-              Continue
+              {translations?.websitePaymentsSuccess?.continue || "Continue"}
             </Button>
           </motion.div>
         </motion.div>

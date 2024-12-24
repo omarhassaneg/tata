@@ -1,19 +1,20 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useOnboarding } from '../context/OnboardingContext';
+import { useLanguage } from '../context/LanguageContext';
 import { Heading, Text } from './ui/Typography';
 import { Button } from './ui/Button'; 
-import { FileText, AlertCircle, X, Loader } from 'lucide-react';
+import { FileText } from 'lucide-react';
 import { fadeIn, staggerChildren } from './ui/animations';
 import { Layout } from './ui/Layout';
 import { saveWebsiteBio } from '../services/api';
 
 const MAX_CHARS = 500;
-const DEFAULT_BIO = "With over 8 years of experience in professional makeup artistry, I specialize in creating stunning looks for weddings, special events, and photo shoots. My approach combines classic techniques with current trends to enhance your natural beauty. Whether you're planning your dream wedding or preparing for an important photo session, I'm here to help you look and feel your absolute best";
 
 export default function WebsiteBio() {
   const { dispatch } = useOnboarding();
-  const [bio, setBio] = useState(DEFAULT_BIO);
+  const { translations } = useLanguage();
+  const [bio, setBio] = useState(translations?.websiteBio?.exampleSection?.content || "");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [showTips, setShowTips] = useState(true);
@@ -64,26 +65,22 @@ export default function WebsiteBio() {
           className="inline-flex items-center gap-2 bg-primary-gold/10 text-primary-gold px-4 py-2 rounded-full mb-4"
         >
           <FileText className="w-4 h-4" />
-          <span className="text-sm font-medium">Professional Bio</span>
+          <span className="text-sm font-medium">{translations?.websiteBio?.badge || "Professional Bio"}</span>
         </motion.div>
         
-        <Heading className="mb-4">Tell Your Story</Heading>
+        <Heading className="mb-4">{translations?.websiteBio?.title || "Tell Your Story"}</Heading>
         
         <Text className="max-w-md mx-auto">
-          Write a compelling bio that showcases your expertise and connects with potential clients.
+          {translations?.websiteBio?.subtitle || "Write a compelling bio that showcases your expertise and connects with potential clients."}
         </Text>
       </div>
 
       <motion.div className="space-y-6">
         
 <div className="max-w-4xl mx-auto bg-white dark:bg-white/5 p-6 rounded-2xl border-2 border-gray-200 dark:border-white/10">
-          <Text className="text-sm font-medium text-gray-600 dark:text-gray-400 mb-2">Example Bio:</Text>
+          <Text className="text-sm font-medium text-gray-600 dark:text-gray-400 mb-2">{translations?.websiteBio?.exampleSection?.title || "Example Bio:"}</Text>
           <Text className="text-sm text-gray-600 dark:text-gray-300 italic">
-            "With over 8 years of experience in professional makeup artistry, I specialize in creating 
-            stunning looks for weddings, special events, and photo shoots. My approach combines classic 
-            techniques with current trends to enhance your natural beauty. Whether you're planning your dream 
-            wedding or preparing for an important photo session, I'm here to help you look and feel your 
-            absolute best."
+            "{translations?.websiteBio?.exampleSection?.content || "With over 8 years of experience in professional makeup artistry, I specialize in creating stunning looks for weddings, special events, and photo shoots. My approach combines classic techniques with current trends to enhance your natural beauty. Whether you're planning your dream wedding or preparing for an important photo session, I'm here to help you look and feel your absolute best"}"
           </Text>
         </div>
         {/* Bio Input */}
@@ -92,7 +89,7 @@ export default function WebsiteBio() {
             <textarea
               value={bio}
               onChange={(e) => setBio(e.target.value)}
-              placeholder="Write your professional bio here..."
+              placeholder={translations?.websiteBio?.input?.placeholder || "Write your professional bio here..."}
               className="w-full h-64 px-8 py-6 border-2 border-gray-200 dark:border-gray-700 rounded-2xl focus:border-primary-gold focus:ring-0 text-lg resize-none bg-white dark:bg-primary-navy/50 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500"
               rows={8}
               maxLength={MAX_CHARS}
@@ -106,7 +103,7 @@ export default function WebsiteBio() {
                   : 'text-gray-400'
                 }`}
             >
-              {charsLeft} characters remaining
+              {charsLeft} {translations?.websiteBio?.input?.charactersRemaining || "characters remaining"}
             </div>
           </div>
         </div>
@@ -121,10 +118,10 @@ export default function WebsiteBio() {
             disabled={loading}
             className="w-full"
           >
-            {loading ? 'Saving...' : 'Save'}
+            {loading ? translations?.websiteBio?.saving || 'Saving...' : translations?.websiteBio?.save || 'Save'}
           </Button>
           {error && (
-            <p className="text-sm text-red-500 text-center">{error}</p>
+            <p className="text-sm text-red-500 text-center">{error || translations?.websiteBio?.error}</p>
           )}
         </motion.div>
       </motion.div>

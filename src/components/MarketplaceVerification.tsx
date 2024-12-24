@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useOnboarding } from '../context/OnboardingContext';
+import { useLanguage } from '../context/LanguageContext';
 import { Heading, Text } from './ui/Typography';
 import { Button } from './ui/Button';
 import { Shield, BadgeCheck, Star, Camera, AlertCircle } from 'lucide-react';
@@ -17,7 +18,7 @@ interface RequirementProps {
   description: string;
 }
 
-function Requirement({ icon, title, description }: RequirementProps) {
+function Requirement({ icon, title = "", description = "" }: RequirementProps) {
   return (
     <motion.div 
       variants={fadeIn}
@@ -36,6 +37,7 @@ function Requirement({ icon, title, description }: RequirementProps) {
 
 export default function MarketplaceVerification() {
   const { dispatch } = useOnboarding();
+  const { translations } = useLanguage();
   const [profilePhoto, setProfilePhoto] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -89,14 +91,13 @@ export default function MarketplaceVerification() {
           className="inline-flex items-center gap-2 bg-primary-gold/10 text-primary-gold px-4 py-2 rounded-full mb-4"
         >
           <Shield className="w-4 h-4" />
-          <span className="text-sm font-medium">Marketplace Verification</span>
+          <span className="text-sm font-medium">{translations?.marketplaceVerification?.badge}</span>
         </motion.div>
         
-        <Heading className="mb-4">Join Our Verified Sellers</Heading>
+        <Heading className="mb-4">{translations?.marketplaceVerification?.title}</Heading>
         
         <Text className="max-w-2xl mx-auto">
-          Add your profile photo to join Glamic's marketplace and unlock access to eventually get high ticket bookings, opportunity 
-          to become a verified seller with exclusive benefits.
+          {translations?.marketplaceVerification?.subtitle}
         </Text>
       </div>
 
@@ -108,20 +109,20 @@ export default function MarketplaceVerification() {
         <div className="space-y-4">
           <Requirement
             icon={<Camera className="w-5 h-5" />}
-            title="Required: Professional Profile Photo"
-            description="Upload a clear photo of yourself to get listed on the marketplace"
+            title={translations?.marketplaceVerification?.requirements?.profilePhoto?.title || ""}
+            description={translations?.marketplaceVerification?.requirements?.profilePhoto?.description || ""}
           />
           
           <Requirement
             icon={<Shield className="w-5 h-5" />}
-            title="Verified Badge Benefits"
-            description="Get bookings from marketplace, higher visibility, and exclusive features. ID verification and background check required upon qualifying."
+            title={translations?.marketplaceVerification?.requirements?.verifiedBadge?.title || ""}
+            description={translations?.marketplaceVerification?.requirements?.verifiedBadge?.description || ""}
           />
           
           <Requirement
             icon={<BadgeCheck className="w-5 h-5" />}
-            title="Verified Badge Requirements"
-            description="Maintain a 4+ star rating for 6 months with your own regular customer bookings. Complete ID verification and background check when qualified."
+            title={translations?.marketplaceVerification?.requirements?.badgeRequirements?.title || ""}
+            description={translations?.marketplaceVerification?.requirements?.badgeRequirements?.description || ""}
           />
         </div>
 
@@ -131,14 +132,11 @@ export default function MarketplaceVerification() {
             <div className="flex items-start gap-3 mb-6">
               <AlertCircle className="w-5 h-5 text-primary-gold flex-shrink-0 mt-0.5" />
               <Text as="div" className="text-sm text-gray-600 dark:text-gray-300">
-                Your profile photo is crucial for building trust with potential clients. 
-                Ensure your photo:
+                {translations?.marketplaceVerification?.photoGuidelines?.title}
                 <ul className="list-disc list-inside mt-2 space-y-1">
-                  <li>Shows your face clearly</li>
-                  <li>Has good lighting</li>
-                  <li>Uses a light, solid background</li>
-                  <li>Looks professional</li>
-                  <li>Is recent and accurate</li>
+                  {(translations?.marketplaceVerification?.photoGuidelines?.items || []).map((item, index) => (
+                    <li key={index}>{item || ""}</li>
+                  ))}
                 </ul>
               </Text>
             </div>
@@ -146,8 +144,7 @@ export default function MarketplaceVerification() {
             <div className="flex items-start gap-3 mb-6 p-4 bg-gray-50 dark:bg-gray-800/50 rounded-xl">
               <Shield className="w-5 h-5 text-primary-gold flex-shrink-0 mt-0.5" />
               <Text as="div" className="text-sm text-gray-600 dark:text-gray-300">
-                For everyone's safety, we cooperate with local law enforcement and may share account 
-                information in the rare case of investigations or legal proceedings.
+                {translations?.marketplaceVerification?.securityNotice}
               </Text>
             </div>
 
@@ -164,8 +161,8 @@ export default function MarketplaceVerification() {
               onImageDelete={() => setProfilePhoto(null)}
               onCropClick={() => setShowCropper(true)}
               aspectRatio="square"
-              placeholder="Upload your profile photo"
-              helperText="PNG or JPG (max 5MB)"
+              placeholder={translations?.marketplaceVerification?.upload?.placeholder}
+              helperText={translations?.marketplaceVerification?.upload?.helperText}
               maxSize={5}
               className="w-full max-w-xs mx-auto"
             />
@@ -189,8 +186,8 @@ export default function MarketplaceVerification() {
             <Star className="w-5 h-5 text-primary-gold" />
             <Text as="div" className="text-sm">
               {profilePhoto 
-                ? 'Your profile will be listed on the marketplace after review. Earn your verified badge to unlock premium benefits and increased visibility.'
-                : 'Add your profile photo to get listed on the marketplace.'}
+                ? translations?.marketplaceVerification?.verificationStatus?.withPhoto
+                : translations?.marketplaceVerification?.verificationStatus?.withoutPhoto}
             </Text>
           </div>
         </div>
@@ -199,17 +196,19 @@ export default function MarketplaceVerification() {
           variants={fadeIn}
           className="flex justify-center pt-4"
         >
-          <Button
-            variant="primary"
-            onClick={handleContinue}
-            disabled={loading}
-            className="min-w-[200px]"
-          >
-            {loading ? 'Saving...' : profilePhoto ? 'Continue' : 'Skip'}
-          </Button>
-          {error && (
-            <p className="text-sm text-red-500 text-center">{error}</p>
-          )}
+          <div className="flex flex-col items-center gap-4">
+            <Button
+              variant="primary"
+              onClick={handleContinue}
+              disabled={loading}
+              className="min-w-[200px]"
+            >
+              {loading ? translations?.marketplaceVerification?.buttons?.saving : profilePhoto ? translations?.marketplaceVerification?.buttons?.continue : translations?.marketplaceVerification?.buttons?.skip}
+            </Button>
+            {error && (
+              <p className="text-sm text-red-500 text-center">{error || translations?.marketplaceVerification?.error}</p>
+            )}
+          </div>
         </motion.div>
       </motion.div>
     </Layout>

@@ -364,5 +364,190 @@
     "save": "Guardar",
     "saving": "Guardando...",
     "error": "Error al guardar la configuración. Por favor, inténtalo de nuevo."
+  },
+  "websitePortfolio": {
+    "badge": "Imágenes de Portafolio",
+    "title": "Agrega tu Mejor Trabajo",
+    "subtitle": "Sube fotos de tu trabajo para mostrar tus habilidades y estilo. Puedes recortar y ajustar cada imagen. Este paso es opcional.",
+    "upload": {
+      "placeholder": "Agregar Imagen",
+      "helperText": "PNG o JPG (máximo 10MB)"
+    },
+    "cropModal": {
+      "title": "Recortar Imagen",
+      "done": "Listo"
+    },
+    "saving": "Guardando...",
+    "save": "Guardar",
+    "skip": "Omitir",
+    "error": "Error al guardar las imágenes del portafolio. Por favor, inténtalo de nuevo."
+  },
+  "marketplaceVerification": {
+    "badge": "Verificación del Mercado",
+    "title": "Únete a Nuestros Vendedores Verificados",
+    "subtitle": "Agrega tu foto de perfil para unirte al mercado de Glamic y desbloquear acceso a reservas de alto valor, oportunidad de convertirte en un vendedor verificado con beneficios exclusivos.",
+    "requirements": {
+      "profilePhoto": {
+        "title": "Requerido: Foto de Perfil Profesional",
+        "description": "Sube una foto clara de ti mismo para aparecer en el mercado"
+      },
+      "verifiedBadge": {
+        "title": "Beneficios de la Insignia Verificada",
+        "description": "Obtén reservas del mercado, mayor visibilidad y funciones exclusivas. Se requiere verificación de ID y verificación de antecedentes al calificar."
+      },
+      "badgeRequirements": {
+        "title": "Requisitos para la Insignia Verificada",
+        "description": "Mantén una calificación de más de 4 estrellas durante 6 meses con tus reservas regulares de clientes. Completa la verificación de ID y antecedentes cuando califiques."
+      }
+    },
+    "photoGuidelines": {
+      "title": "Tu foto de perfil es crucial para generar confianza con los clientes potenciales. Asegúrate de que tu foto:",
+      "items": [
+        "Muestre tu rostro claramente",
+        "Tenga buena iluminación",
+        "Use un fondo sólido y claro",
+        "Se vea profesional",
+        "Sea reciente y precisa"
+      ]
+    },
+    "securityNotice": "Por tu seguridad, cooperamos con las autoridades locales y podemos compartir información de la cuenta en casos raros de investigaciones o procedimientos legales.",
+    "upload": {
+      "placeholder": "Sube tu foto de perfil",
+      "helperText": "PNG o JPG (máximo 5MB)"
+    },
+    "verificationStatus": {
+      "withPhoto": "Tu perfil aparecerá en el mercado después de la revisión. Gana tu insignia verificada para desbloquear beneficios premium y mayor visibilidad.",
+      "withoutPhoto": "Agrega tu foto de perfil para aparecer en el mercado."
+    },
+    "buttons": {
+      "continue": "Continuar",
+      "skip": "Omitir",
+      "saving": "Guardando..."
+    },
+    "error": "Error al guardar la foto de perfil. Por favor, inténtalo de nuevo."
+  },
+  "websitePaymentsSuccess": {
+    "title": "Sitio Web Completado",
+    "subtitle": "Ahora, configuremos los pagos",
+    "continue": "Continuar"
+  },
+  "depositSettings": {
+    "badge": "Configuración de Depósito",
+    "title": "Elige el Monto del Depósito",
+    "subtitle": "Establece el porcentaje de depósito requerido para las reservas. Este monto se cobrará por adelantado cuando los clientes reserven tus servicios.",
+    "options": {
+      "noDeposit": "Sin Depósito",
+      "custom": "Personalizado"
+    },
+    "saving": "Guardando...",
+    "save": "Guardar",
+    "error": "Error al guardar la configuración. Por favor, inténtalo de nuevo."
+  },
+  "websiteBio": {
+    "badge": "Biografía Profesional",
+    "title": "Cuenta tu Historia",
+    "subtitle": "Escribe una biografía convincente que muestre tu experiencia y conecte con clientes potenciales.",
+    "exampleSection": {
+      "title": "Ejemplo de Biografía:",
+      "content": "Con más de 8 años de experiencia en maquillaje profesional, me especializo en crear looks impresionantes para bodas, eventos especiales y sesiones fotográficas. Mi enfoque combina técnicas clásicas con tendencias actuales para realzar tu belleza natural. Ya sea que estés planeando tu boda soñada o preparándote para una sesión fotográfica importante, estoy aquí para ayudarte a lucir y sentirte absolutamente increíble"
+    },
+    "input": {
+      "placeholder": "Escribe tu biografía profesional aquí...",
+      "charactersRemaining": "caracteres restantes"
+    },
+    "saving": "Guardando...",
+    "save": "Guardar",
+    "error": "Error al guardar la biografía. Por favor, inténtalo de nuevo."
+  },
+  "cashPaymentSettings": {
+    "badge": "Pagos en Efectivo",
+    "title": "Instrucciones de Pago en Efectivo",
+    "subtitle": "Personaliza las instrucciones de pago que los clientes recibirán por SMS después de la reserva. El monto del depósito se agregará automáticamente al mensaje.",
+    "countryTag": {
+      "us": "Instrucciones de Pago en EE.UU.",
+      "other": "Instrucciones de Pago en Canadá"
+    },
+    "input": {
+      "label": "Instrucciones de Pago",
+      "placeholder": "Ingresa tus instrucciones de pago..."
+    },
+    "saving": "Guardando...",
+    "save": "Guardar",
+    "error": "Error al guardar la configuración. Por favor, inténtalo de nuevo."
+  },
+  "subscriptionPlans": {
+    "badge": "Plan de Suscripción",
+    "title": "Comienza Hoy",
+    "subtitle": "Accede a todas las funciones y comienza a hacer crecer tu negocio con Glamic",
+    "plans": {
+      "yearly": {
+        "title": "Plan Anual",
+        "subtitle": "Facturado anualmente",
+        "savings": "Ahorra 20%"
+      },
+      "monthly": {
+        "title": "Plan Mensual",
+        "subtitle": "Facturado mensualmente"
+      }
+    },
+    "features": {
+      "booking": "Herramientas avanzadas de reserva para hacer crecer tu negocio",
+      "automation": "Tareas administrativas automatizadas para ahorrarte tiempo",
+      "security": "Sitio web profesional y pagos seguros"
+    },
+    "action": {
+      "button": "Comienza Hoy - $0 a Pagar Ahora",
+      "disclaimer": "Cancela cuando quieras. No se requiere compromiso a largo plazo."
+    }
+  },
+  "creditCardPayments": {
+    "badge": "Pagos con Tarjeta",
+    "title": "Acepta Pagos con Tarjeta",
+    "subtitle": "Permite que los clientes paguen de forma segura con tarjetas de crédito, Apple Pay y más. Impulsado por el procesamiento de pagos confiable de Stripe.",
+    "features": {
+      "cards": {
+        "title": "Tarjetas de Crédito y Débito",
+        "description": "Acepta todas las principales tarjetas de crédito y débito de forma segura"
+      },
+      "digitalWallets": {
+        "title": "Billeteras Digitales",
+        "description": "Apple Pay, Google Pay y pago con un toque en tu teléfono"
+      },
+      "financing": {
+        "title": "Financiamiento Affirm",
+        "description": "Permite que los clientes dividan los pagos en cuotas fáciles"
+      },
+      "pricing": {
+        "title": "Precios Simples",
+        "description": "4% por transacción. Sin cargos ocultos ni costos mensuales"
+      }
+    },
+    "setup": "Configurar Pagos con Tarjeta",
+    "skip": "Omitir por Ahora"
+  },
+  "appDownload": {
+    "badge": "Aplicación Móvil",
+    "title": "Descarga Glamic",
+    "subtitle": "Experimenta el futuro de la gestión de negocios de belleza en tu dispositivo móvil. ¡Nuestra experiencia web estará disponible pronto!",
+    "downloadButton": "Descargar App",
+    "qrCodeInstruction": "Escanea el código QR con tu dispositivo móvil",
+    "availableDevices": "Disponible para dispositivos iOS y Android"
+  },
+  "subscriptionSuccess": {
+    "title": "¡Bienvenido a Glamic! 🎉",
+    "subtitle": "Tu sitio web profesional está listo. ¡Compártelo con tus clientes y comienza a aceptar reservas!",
+    "websiteUrl": {
+      "copyTooltip": "Copiar enlace",
+      "copied": "¡Copiado!",
+      "instagramHint": "Agrega este enlace a tu biografía de Instagram para comenzar a aceptar reservas directamente desde tu perfil"
+    },
+    "actions": {
+      "previewWebsite": "Vista Previa del Sitio Web",
+      "goToAccount": "Ir a la Cuenta",
+      "accountHint": {
+        "preview": "Vista previa de tu sitio web primero para habilitar el acceso a la cuenta",
+        "ready": "Accede a tu calendario y administra tu negocio"
+      }
+    }
   }
 }

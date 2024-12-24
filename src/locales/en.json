@@ -364,5 +364,190 @@
     "save": "Save",
     "saving": "Saving...",
     "error": "Failed to save settings. Please try again."
+  },
+  "websitePortfolio": {
+    "badge": "Portfolio Images",
+    "title": "Add Your Best Work",
+    "subtitle": "Upload photos of your work to showcase your skills and style. You can crop and adjust each image. This step is optional.",
+    "upload": {
+      "placeholder": "Add Image",
+      "helperText": "PNG or JPG (max 10MB)"
+    },
+    "cropModal": {
+      "title": "Crop Image",
+      "done": "Done"
+    },
+    "saving": "Saving...",
+    "save": "Save",
+    "skip": "Skip",
+    "error": "Failed to save portfolio images. Please try again."
+  },
+  "marketplaceVerification": {
+    "badge": "Marketplace Verification",
+    "title": "Join Our Verified Sellers",
+    "subtitle": "Add your profile photo to join Glamic's marketplace and unlock access to eventually get high ticket bookings, opportunity to become a verified seller with exclusive benefits.",
+    "requirements": {
+      "profilePhoto": {
+        "title": "Required: Professional Profile Photo",
+        "description": "Upload a clear photo of yourself to get listed on the marketplace"
+      },
+      "verifiedBadge": {
+        "title": "Verified Badge Benefits",
+        "description": "Get bookings from marketplace, higher visibility, and exclusive features. ID verification and background check required upon qualifying."
+      },
+      "badgeRequirements": {
+        "title": "Verified Badge Requirements",
+        "description": "Maintain a 4+ star rating for 6 months with your own regular customer bookings. Complete ID verification and background check when qualified."
+      }
+    },
+    "photoGuidelines": {
+      "title": "Your profile photo is crucial for building trust with potential clients. Ensure your photo:",
+      "items": [
+        "Shows your face clearly",
+        "Has good lighting",
+        "Uses a light, solid background",
+        "Looks professional",
+        "Is recent and accurate"
+      ]
+    },
+    "securityNotice": "For everyone's safety, we cooperate with local law enforcement and may share account information in the rare case of investigations or legal proceedings.",
+    "upload": {
+      "placeholder": "Upload your profile photo",
+      "helperText": "PNG or JPG (max 5MB)"
+    },
+    "verificationStatus": {
+      "withPhoto": "Your profile will be listed on the marketplace after review. Earn your verified badge to unlock premium benefits and increased visibility.",
+      "withoutPhoto": "Add your profile photo to get listed on the marketplace."
+    },
+    "buttons": {
+      "continue": "Continue",
+      "skip": "Skip",
+      "saving": "Saving..."
+    },
+    "error": "Failed to save profile photo. Please try again."
+  },
+  "websitePaymentsSuccess": {
+    "title": "Website Completed",
+    "subtitle": "Now, let's setup payments",
+    "continue": "Continue"
+  },
+  "depositSettings": {
+    "badge": "Deposit Settings",
+    "title": "Choose Deposit Amount",
+    "subtitle": "Set the deposit percentage required for bookings. This amount will be collected upfront when clients book your services.",
+    "options": {
+      "noDeposit": "No Deposit",
+      "custom": "Custom"
+    },
+    "saving": "Saving...",
+    "save": "Save",
+    "error": "Failed to save settings. Please try again."
+  },
+  "websiteBio": {
+    "badge": "Professional Bio",
+    "title": "Tell Your Story",
+    "subtitle": "Write a compelling bio that showcases your expertise and connects with potential clients.",
+    "exampleSection": {
+      "title": "Example Bio:",
+      "content": "With over 8 years of experience in professional makeup artistry, I specialize in creating stunning looks for weddings, special events, and photo shoots. My approach combines classic techniques with current trends to enhance your natural beauty. Whether you're planning your dream wedding or preparing for an important photo session, I'm here to help you look and feel your absolute best"
+    },
+    "input": {
+      "placeholder": "Write your professional bio here...",
+      "charactersRemaining": "characters remaining"
+    },
+    "saving": "Saving...",
+    "save": "Save",
+    "error": "Failed to save bio. Please try again."
+  },
+  "cashPaymentSettings": {
+    "badge": "Cash Payments",
+    "title": "Cash Payment Instructions",
+    "subtitle": "Customize the payment instructions that clients will receive via SMS after booking. The deposit amount will be automatically added to the message.",
+    "countryTag": {
+      "us": "USA Cash Instructions",
+      "other": "Canada Cash Instructions"
+    },
+    "input": {
+      "label": "Payment Instructions",
+      "placeholder": "Enter your payment instructions..."
+    },
+    "saving": "Saving...",
+    "save": "Save",
+    "error": "Failed to save settings. Please try again."
+  },
+  "subscriptionPlans": {
+    "badge": "Subscription Plan",
+    "title": "Get Started Today",
+    "subtitle": "Access all features and start growing your business with Glamic",
+    "plans": {
+      "yearly": {
+        "title": "Annual Plan",
+        "subtitle": "Billed yearly",
+        "savings": "Save 20%"
+      },
+      "monthly": {
+        "title": "Monthly Plan",
+        "subtitle": "Billed monthly"
+      }
+    },
+    "features": {
+      "booking": "Advanced booking tools to grow your business",
+      "automation": "Automated admin tasks to save you time",
+      "security": "Professional website and secure payments"
+    },
+    "action": {
+      "button": "Start Today - $0 Due Now",
+      "disclaimer": "Cancel anytime. No long-term commitment required."
+    }
+  },
+  "creditCardPayments": {
+    "badge": "Card Payments",
+    "title": "Accept Card Payments",
+    "subtitle": "Let clients pay securely with credit cards, Apple Pay, and more. Powered by Stripe's trusted payment processing.",
+    "features": {
+      "cards": {
+        "title": "Credit & Debit Cards",
+        "description": "Accept all major credit and debit cards securely"
+      },
+      "digitalWallets": {
+        "title": "Digital Wallets",
+        "description": "Apple Pay, Google Pay, and tap-to-pay on your phone"
+      },
+      "financing": {
+        "title": "Affirm Financing",
+        "description": "Let clients split payments into easy installments"
+      },
+      "pricing": {
+        "title": "Simple Pricing",
+        "description": "4% per transaction. No hidden fees or monthly charges"
+      }
+    },
+    "setup": "Setup Card Payments",
+    "skip": "Skip for Now"
+  },
+  "appDownload": {
+    "badge": "Mobile App",
+    "title": "Download Glamic",
+    "subtitle": "Experience the future of beauty business management on your mobile device. Our web experience is coming soon!",
+    "downloadButton": "Download App",
+    "qrCodeInstruction": "Scan QR code with your mobile device",
+    "availableDevices": "Available for iOS and Android devices"
+  },
+  "subscriptionSuccess": {
+    "title": "Welcome to Glamic! 🎉",
+    "subtitle": "Your professional website is ready. Share it with your clients and start accepting bookings!",
+    "websiteUrl": {
+      "copyTooltip": "Copy link",
+      "copied": "Copied!",
+      "instagramHint": "Add this link to your Instagram bio to start accepting bookings directly from your profile"
+    },
+    "actions": {
+      "previewWebsite": "Preview Your Website",
+      "goToAccount": "Go to Account",
+      "accountHint": {
+        "preview": "Preview your website first to enable account access",
+        "ready": "Access your calendar and manage your business"
+      }
+    }
   }
 }

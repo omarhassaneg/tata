@@ -364,5 +364,190 @@
     "save": "Enregistrer",
     "saving": "Enregistrement...",
     "error": "Erreur lors de l'enregistrement des paramètres. Veuillez réessayer."
+  },
+  "websitePortfolio": {
+    "badge": "Images du Portfolio",
+    "title": "Ajoutez vos Meilleurs Travaux",
+    "subtitle": "Téléchargez des photos de votre travail pour montrer vos compétences et votre style. Vous pouvez recadrer et ajuster chaque image. Cette étape est facultative.",
+    "upload": {
+      "placeholder": "Ajouter une Image",
+      "helperText": "PNG ou JPG (maximum 10MB)"
+    },
+    "cropModal": {
+      "title": "Recadrer l'Image",
+      "done": "Terminé"
+    },
+    "saving": "Enregistrement...",
+    "save": "Enregistrer",
+    "skip": "Passer",
+    "error": "Erreur lors de l'enregistrement des images du portfolio. Veuillez réessayer."
+  },
+  "marketplaceVerification": {
+    "badge": "Vérification du Marché",
+    "title": "Rejoignez Nos Vendeurs Vérifiés",
+    "subtitle": "Ajoutez votre photo de profil pour rejoindre le marché Glamic et débloquer l'accès à des réservations de haute valeur, avec l'opportunité de devenir un vendeur vérifié avec des avantages exclusifs.",
+    "requirements": {
+      "profilePhoto": {
+        "title": "Requis : Photo de Profil Professionnelle",
+        "description": "Téléchargez une photo claire de vous-même pour être listé sur le marché"
+      },
+      "verifiedBadge": {
+        "title": "Avantages du Badge Vérifié",
+        "description": "Obtenez des réservations du marché, une meilleure visibilité et des fonctionnalités exclusives. Vérification d'identité et vérification des antécédents requises lors de la qualification."
+      },
+      "badgeRequirements": {
+        "title": "Conditions pour le Badge Vérifié",
+        "description": "Maintenez une note de plus de 4 étoiles pendant 6 mois avec vos réservations clients régulières. Complétez la vérification d'identité et des antécédents une fois qualifié."
+      }
+    },
+    "photoGuidelines": {
+      "title": "Votre photo de profil est cruciale pour établir la confiance avec les clients potentiels. Assurez-vous que votre photo :",
+      "items": [
+        "Montre clairement votre visage",
+        "A un bon éclairage",
+        "Utilise un fond uni et clair",
+        "Est professionnelle",
+        "Est récente et fidèle"
+      ]
+    },
+    "securityNotice": "Pour la sécurité de tous, nous coopérons avec les autorités locales et pouvons partager les informations du compte dans les rares cas d'enquêtes ou de procédures légales.",
+    "upload": {
+      "placeholder": "Téléchargez votre photo de profil",
+      "helperText": "PNG ou JPG (maximum 5MB)"
+    },
+    "verificationStatus": {
+      "withPhoto": "Votre profil sera listé sur le marché après examen. Gagnez votre badge vérifié pour débloquer des avantages premium et une visibilité accrue.",
+      "withoutPhoto": "Ajoutez votre photo de profil pour être listé sur le marché."
+    },
+    "buttons": {
+      "continue": "Continuer",
+      "skip": "Passer",
+      "saving": "Enregistrement..."
+    },
+    "error": "Erreur lors de l'enregistrement de la photo de profil. Veuillez réessayer."
+  },
+  "websitePaymentsSuccess": {
+    "title": "Site Web Terminé",
+    "subtitle": "Maintenant, configurons les paiements",
+    "continue": "Continuer"
+  },
+  "depositSettings": {
+    "badge": "Paramètres d'Acompte",
+    "title": "Choisissez le Montant de l'Acompte",
+    "subtitle": "Définissez le pourcentage d'acompte requis pour les réservations. Ce montant sera collecté à l'avance lorsque les clients réservent vos services.",
+    "options": {
+      "noDeposit": "Sans Acompte",
+      "custom": "Personnalisé"
+    },
+    "saving": "Enregistrement...",
+    "save": "Enregistrer",
+    "error": "Erreur lors de l'enregistrement des paramètres. Veuillez réessayer."
+  },
+  "websiteBio": {
+    "badge": "Biographie Professionnelle",
+    "title": "Racontez Votre Histoire",
+    "subtitle": "Rédigez une biographie convaincante qui met en valeur votre expertise et établit un lien avec vos clients potentiels.",
+    "exampleSection": {
+      "title": "Exemple de Biographie :",
+      "content": "Avec plus de 8 ans d'expérience en maquillage professionnel, je me spécialise dans la création de looks époustouflants pour les mariages, les événements spéciaux et les séances photos. Mon approche combine techniques classiques et tendances actuelles pour sublimer votre beauté naturelle. Que vous planifiez votre mariage de rêve ou que vous vous prépariez pour une séance photo importante, je suis là pour vous aider à paraître et vous sentir absolument magnifique"
+    },
+    "input": {
+      "placeholder": "Écrivez votre biographie professionnelle ici...",
+      "charactersRemaining": "caractères restants"
+    },
+    "saving": "Enregistrement...",
+    "save": "Enregistrer",
+    "error": "Erreur lors de l'enregistrement de la biographie. Veuillez réessayer."
+  },
+  "cashPaymentSettings": {
+    "badge": "Paiements en Espèces",
+    "title": "Instructions de Paiement en Espèces",
+    "subtitle": "Personnalisez les instructions de paiement que les clients recevront par SMS après la réservation. Le montant de l'acompte sera automatiquement ajouté au message.",
+    "countryTag": {
+      "us": "Instructions de Paiement USA",
+      "other": "Instructions de Paiement Canada"
+    },
+    "input": {
+      "label": "Instructions de Paiement",
+      "placeholder": "Entrez vos instructions de paiement..."
+    },
+    "saving": "Enregistrement...",
+    "save": "Enregistrer",
+    "error": "Erreur lors de l'enregistrement des paramètres. Veuillez réessayer."
+  },
+  "subscriptionPlans": {
+    "badge": "Plan d'Abonnement",
+    "title": "Commencez Aujourd'hui",
+    "subtitle": "Accédez à toutes les fonctionnalités et développez votre entreprise avec Glamic",
+    "plans": {
+      "yearly": {
+        "title": "Plan Annuel",
+        "subtitle": "Facturation annuelle",
+        "savings": "Économisez 20%"
+      },
+      "monthly": {
+        "title": "Plan Mensuel",
+        "subtitle": "Facturation mensuelle"
+      }
+    },
+    "features": {
+      "booking": "Outils de réservation avancés pour développer votre entreprise",
+      "automation": "Tâches administratives automatisées pour gagner du temps",
+      "security": "Site web professionnel et paiements sécurisés"
+    },
+    "action": {
+      "button": "Commencez Aujourd'hui - 0$ à Payer Maintenant",
+      "disclaimer": "Annulez à tout moment. Aucun engagement à long terme requis."
+    }
+  },
+  "creditCardPayments": {
+    "badge": "Paiements par Carte",
+    "title": "Acceptez les Paiements par Carte",
+    "subtitle": "Permettez aux clients de payer en toute sécurité avec des cartes de crédit, Apple Pay et plus encore. Propulsé par le traitement des paiements fiable de Stripe.",
+    "features": {
+      "cards": {
+        "title": "Cartes de Crédit et Débit",
+        "description": "Acceptez toutes les principales cartes de crédit et de débit en toute sécurité"
+      },
+      "digitalWallets": {
+        "title": "Portefeuilles Numériques",
+        "description": "Apple Pay, Google Pay et paiement sans contact sur votre téléphone"
+      },
+      "financing": {
+        "title": "Financement Affirm",
+        "description": "Permettez aux clients de diviser les paiements en versements faciles"
+      },
+      "pricing": {
+        "title": "Tarification Simple",
+        "description": "4% par transaction. Pas de frais cachés ni de charges mensuelles"
+      }
+    },
+    "setup": "Configurer les Paiements par Carte",
+    "skip": "Passer pour l'Instant"
+  },
+  "appDownload": {
+    "badge": "Application Mobile",
+    "title": "Téléchargez Glamic",
+    "subtitle": "Découvrez l'avenir de la gestion des entreprises de beauté sur votre appareil mobile. Notre expérience web sera bientôt disponible !",
+    "downloadButton": "Télécharger l'App",
+    "qrCodeInstruction": "Scannez le code QR avec votre appareil mobile",
+    "availableDevices": "Disponible pour les appareils iOS et Android"
+  },
+  "subscriptionSuccess": {
+    "title": "Bienvenue sur Glamic ! 🎉",
+    "subtitle": "Votre site web professionnel est prêt. Partagez-le avec vos clients et commencez à accepter des réservations !",
+    "websiteUrl": {
+      "copyTooltip": "Copier le lien",
+      "copied": "Copié !",
+      "instagramHint": "Ajoutez ce lien à votre bio Instagram pour commencer à accepter des réservations directement depuis votre profil"
+    },
+    "actions": {
+      "previewWebsite": "Aperçu du Site Web",
+      "goToAccount": "Accéder au Compte",
+      "accountHint": {
+        "preview": "Prévisualisez d'abord votre site web pour activer l'accès au compte",
+        "ready": "Accédez à votre calendrier et gérez votre entreprise"
+      }
+    }
   }
 }

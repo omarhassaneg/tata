@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useOnboarding } from '../context/OnboardingContext';
+import { useLanguage } from '../context/LanguageContext';
 import { Heading, Text } from './ui/Typography';
 import { Button } from './ui/Button';
 import { DollarSign, AlertCircle } from 'lucide-react';
@@ -18,6 +19,7 @@ const getDefaultInstructions = (countryCode: string, email: string) => {
 
 export default function CashPaymentSettings() {
   const { state, dispatch } = useOnboarding();
+  const { translations } = useLanguage();
   const countryCode = extractCountryFromAddress(state.serviceLocation.billingAddress || '');
   const [instructions, setInstructions] = useState(
     state?.paymentSettings?.cashInstructions || 
@@ -70,14 +72,13 @@ export default function CashPaymentSettings() {
           className="inline-flex items-center gap-2 bg-primary-gold/10 text-primary-gold px-4 py-2 rounded-full mb-4"
         >
           <DollarSign className="w-4 h-4" />
-          <span className="text-sm font-medium">Cash Payments</span>
+          <span className="text-sm font-medium">{translations?.cashPaymentSettings?.badge || "Cash Payments"}</span>
         </motion.div>
         
-        <Heading className="mb-4">Cash Payment Instructions</Heading>
+        <Heading className="mb-4">{translations?.cashPaymentSettings?.title || "Cash Payment Instructions"}</Heading>
         
         <Text className="max-w-2xl mx-auto">
-          Customize the payment instructions that clients will receive via SMS after booking. 
-          The deposit amount will be automatically added to the message.
+          {translations?.cashPaymentSettings?.subtitle || "Customize the payment instructions that clients will receive via SMS after booking. The deposit amount will be automatically added to the message."}
         </Text>
       </div>
 
@@ -89,7 +90,10 @@ export default function CashPaymentSettings() {
           {/* Country Tag */}
           <div className="inline-flex items-center gap-2 bg-primary-gold/10 text-primary-gold px-4 py-2 rounded-full">
             <span className="text-sm font-medium">
-              {countryCode === 'US' ? 'USA Cash Instructions' : 'Canada Cash Instructions'}
+              {countryCode === 'US' 
+                ? (translations?.cashPaymentSettings?.countryTag?.us || 'USA Cash Instructions')
+                : (translations?.cashPaymentSettings?.countryTag?.other || 'Canada Cash Instructions')
+              }
             </span>
           </div>
         </div>
@@ -97,12 +101,12 @@ export default function CashPaymentSettings() {
         {/* Instructions Input */}
         <div className="max-w-4xl mx-auto space-y-2">
           <label className="block text-sm font-medium text-gray-700">
-            Payment Instructions
+            {translations?.cashPaymentSettings?.input?.label || "Payment Instructions"}
           </label>
           <textarea
             value={instructions}
             onChange={(e) => setInstructions(e.target.value)}
-            placeholder="Enter your payment instructions..."
+            placeholder={translations?.cashPaymentSettings?.input?.placeholder || "Enter your payment instructions..."}
             className="w-full min-h-[150px] px-6 py-4 border-2 border-gray-200 dark:border-gray-700 rounded-2xl focus:border-primary-gold focus:ring-0 text-lg resize-none bg-white dark:bg-primary-navy/50 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500"
             rows={6}
           />
@@ -118,10 +122,10 @@ export default function CashPaymentSettings() {
             disabled={loading || !instructions.trim()}
             className="w-full"
           >
-            {loading ? 'Saving...' : 'Save'}
+            {loading ? (translations?.cashPaymentSettings?.saving || 'Saving...') : (translations?.cashPaymentSettings?.save || 'Save')}
           </Button>
           {error && (
-            <p className="text-sm text-red-500 text-center">{error}</p>
+            <p className="text-sm text-red-500 text-center">{error || translations?.cashPaymentSettings?.error}</p>
           )}
         </motion.div>
       </motion.div>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Confetti from 'react-confetti';
 import { useOnboarding } from '../context/OnboardingContext';
+import { useLanguage } from '../context/LanguageContext';
 import { Heading, Text } from './ui/Typography';
 import { Button } from './ui/Button';
 import { ExternalLink, Copy, Instagram } from 'lucide-react';
@@ -32,6 +33,7 @@ const itemVariants = {
 
 export default function SubscriptionSuccess() {
   const { state, dispatch } = useOnboarding();
+  const { translations } = useLanguage();
   const [showConfetti, setShowConfetti] = useState(true);
   const [copied, setCopied] = useState(false);
   const [windowSize, setWindowSize] = useState({
@@ -93,10 +95,10 @@ export default function SubscriptionSuccess() {
       >
         <motion.div variants={itemVariants} className="mb-8">
           <Heading className="mb-4">
-            Welcome to Glamic! 🎉
+            {translations?.subscriptionSuccess?.title || "Welcome to Glamic! 🎉"}
           </Heading>
           <Text>
-            Your professional website is ready. Share it with your clients and start accepting bookings!
+            {translations?.subscriptionSuccess?.subtitle || "Your professional website is ready. Share it with your clients and start accepting bookings!"}
           </Text>
         </motion.div>
 
@@ -109,7 +111,7 @@ export default function SubscriptionSuccess() {
             <button
               onClick={handleCopyLink}
               className="p-2 hover:bg-gray-50 dark:hover:bg-white/10 rounded-lg transition-colors"
-              title="Copy link"
+              title={translations?.subscriptionSuccess?.websiteUrl?.copyTooltip || "Copy link"}
             >
               {copied ? (
                 <motion.span
@@ -117,7 +119,7 @@ export default function SubscriptionSuccess() {
                   animate={{ scale: 1 }}
                   className="text-primary-gold"
                 >
-                  ✓
+                  {translations?.subscriptionSuccess?.websiteUrl?.copied || "✓"}
                 </motion.span>
               ) : (
                 <Copy className="w-5 h-5 text-gray-600" />
@@ -127,7 +129,7 @@ export default function SubscriptionSuccess() {
 
           <div className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-400 bg-gray-50 dark:bg-gray-800/50 p-4 rounded-xl">
             <Instagram className="w-4 h-4 flex-shrink-0" />
-            <span>Add this link to your Instagram bio to start accepting bookings directly from your profile</span>
+            <span>{translations?.subscriptionSuccess?.websiteUrl?.instagramHint || "Add this link to your Instagram bio to start accepting bookings directly from your profile"}</span>
           </div>
         </motion.div>
 
@@ -137,7 +139,7 @@ export default function SubscriptionSuccess() {
             onClick={handlePreviewWebsite}
             className="w-full group"
           >
-            <span>Preview Your Website</span>
+            <span>{translations?.subscriptionSuccess?.actions?.previewWebsite || "Preview Your Website"}</span>
             <ExternalLink className="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </Button>
 
@@ -147,13 +149,13 @@ export default function SubscriptionSuccess() {
             className={`w-full transition-all duration-300 ${!hasPreviewedWebsite ? 'opacity-50 cursor-not-allowed' : ''}`}
             disabled={!hasPreviewedWebsite}
           >
-            Go to Account
+            {translations?.subscriptionSuccess?.actions?.goToAccount || "Go to Account"}
           </Button>
 
           <Text className="text-sm text-gray-500">
             {hasPreviewedWebsite 
-              ? 'Access your calendar and manage your business'
-              : 'Preview your website first to enable account access'}
+              ? translations?.subscriptionSuccess?.actions?.accountHint?.ready || 'Access your calendar and manage your business'
+              : translations?.subscriptionSuccess?.actions?.accountHint?.preview || 'Preview your website first to enable account access'}
           </Text>
         </motion.div>
       </motion.div>
