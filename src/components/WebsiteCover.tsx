@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { useOnboarding } from '../context/OnboardingContext';
+import { useLanguage } from '../context/LanguageContext';
 import { Heading, Text } from './ui/Typography';
 import { Button } from './ui/Button';
 import { Image, Loader } from 'lucide-react';
@@ -11,6 +12,7 @@ import { saveWebsiteCover } from '../services/api';
 
 export default function WebsiteCover() {
   const { dispatch } = useOnboarding();
+  const { translations } = useLanguage();
   const [coverImage, setCoverImage] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -62,14 +64,13 @@ export default function WebsiteCover() {
           className="inline-flex items-center gap-2 bg-primary-gold/10 text-primary-gold px-4 py-2 rounded-full mb-4"
         >
           <Image className="w-4 h-4" />
-          <span className="text-sm font-medium">Cover Image</span>
+          <span className="text-sm font-medium">{translations?.websiteCover?.badge || "Cover Image"}</span>
         </motion.div>
         
-        <Heading className="mb-4">Add a Cover Image</Heading>
+        <Heading className="mb-4">{translations?.websiteCover?.title || "Add a Cover Image"}</Heading>
         
         <Text className="max-w-md mx-auto">
-          Upload a beautiful cover image for your website's hero section. 
-          We'll use our default image if you skip this step.
+          {translations?.websiteCover?.subtitle || "Upload a beautiful cover image for your website's hero section. We'll use our default image if you skip this step."}
         </Text>
       </div>
 
@@ -89,7 +90,7 @@ export default function WebsiteCover() {
             }}
             onImageDelete={clearImage}
             aspectRatio={21/9}
-            placeholder="Click to upload a cover image"
+            placeholder={translations?.websiteCover?.placeholder || "Click to upload a cover image"}
             className="w-full rounded-2xl overflow-hidden"
           />
         </div>
@@ -104,10 +105,16 @@ export default function WebsiteCover() {
             disabled={loading}
             className="w-full"
           >
-            {loading ? 'Saving...' : coverImage ? 'Save' : 'Skip'}
+            {loading 
+              ? translations?.websiteCover?.saving || "Saving..." 
+              : coverImage 
+                ? translations?.websiteCover?.save || "Save" 
+                : translations?.websiteCover?.skip || "Skip"}
           </Button>
           {error && (
-            <p className="text-sm text-red-500 text-center">{error}</p>
+            <p className="text-sm text-red-500 text-center">
+              {translations?.websiteCover?.error || "Failed to save cover image. Please try again."}
+            </p>
           )}
         </motion.div>
       </motion.div>

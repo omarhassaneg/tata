@@ -293,6 +293,16 @@
     "saving": "Enregistrement...",
     "error": "Erreur lors de l'enregistrement du logo. Veuillez réessayer."
   },
+  "websiteCover": {
+    "badge": "Image de Couverture",
+    "title": "Ajoutez une Image de Couverture",
+    "subtitle": "Téléchargez une belle image de couverture pour la section héro de votre site web. Nous utiliserons notre image par défaut si vous sautez cette étape.",
+    "placeholder": "Cliquez pour télécharger une image de couverture",
+    "saving": "Enregistrement...",
+    "save": "Enregistrer",
+    "skip": "Passer",
+    "error": "Erreur lors de l'enregistrement de l'image de couverture. Veuillez réessayer."
+  },
   "websiteSuccess": {
     "badge": "Configuration du Site Web",
     "title": "Configuration Terminée",

@@ -299,6 +299,16 @@
     "subtitle": "Now, let's design your website in under 1 minute",
     "continue": "Continue"
   },
+  "websiteCover": {
+    "badge": "Cover Image",
+    "title": "Add a Cover Image",
+    "subtitle": "Upload a beautiful cover image for your website's hero section. We'll use our default image if you skip this step.",
+    "placeholder": "Click to upload a cover image",
+    "saving": "Saving...",
+    "save": "Save",
+    "skip": "Skip",
+    "error": "Failed to save cover image. Please try again."
+  },
   "contactDisplay": {
     "badge": "Contact Display",
     "title": "Contact Information",

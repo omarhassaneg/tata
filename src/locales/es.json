@@ -293,6 +293,16 @@
     "saving": "Guardando...",
     "error": "Error al guardar el logo. Por favor, inténtalo de nuevo."
   },
+  "websiteCover": {
+    "badge": "Imagen de Portada",
+    "title": "Agrega una Imagen de Portada",
+    "subtitle": "Sube una hermosa imagen de portada para la sección principal de tu sitio web. Usaremos nuestra imagen predeterminada si omites este paso.",
+    "placeholder": "Haz clic para subir una imagen de portada",
+    "saving": "Guardando...",
+    "save": "Guardar",
+    "skip": "Omitir",
+    "error": "Error al guardar la imagen de portada. Por favor, inténtalo de nuevo."
+  },
   "websiteSuccess": {
     "badge": "Configuración del Sitio Web",
     "title": "Configuración Completada",

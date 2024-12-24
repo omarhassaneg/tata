@@ -293,6 +293,16 @@
     "saving": "Kaydediliyor...",
     "error": "Logo kaydedilirken hata oluştu. Lütfen tekrar deneyin."
   },
+  "websiteCover": {
+    "badge": "Site Kapak Görseli",
+    "title": "Kapak Görseli Ekleyin",
+    "subtitle": "Web sitenizin ana bölümü için güzel bir kapak görseli yükleyin. Bu adımı atlarsanız varsayılan görselimizi kullanacağız.",
+    "placeholder": "Kapak görseli yüklemek için tıklayın",
+    "saving": "Kaydediliyor...",
+    "save": "Kaydet",
+    "skip": "Atla",
+    "error": "Kapak görseli kaydedilirken hata oluştu. Lütfen tekrar deneyin."
+  },
   "websiteSuccess": {
     "badge": "Web Sitesi Kurulumu",
     "title": "Ayarlar Tamamlandı",
