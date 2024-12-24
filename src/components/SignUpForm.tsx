@@ -10,6 +10,15 @@ import { Layout } from './ui/Layout';
 import { useLanguage } from '../context/LanguageContext';
 import { Input } from './ui/Input';
 
+interface FormData {
+  businessName: string;
+  firstName: string;
+  lastName: string;
+  email: string;
+  instagram: string;
+  phone: string;
+}
+
 interface Question {
   id: string;
   field: keyof FormData;
@@ -20,98 +29,98 @@ interface Question {
   validate?: (value: string) => string | undefined;
 }
 
-interface FormData {
-  businessName: string;
-  firstName: string;
-  lastName: string;
-  email: string;
-  instagram: string;
-  phone: string;
-}
-
 export default function SignUpForm() {
   const { state, dispatch } = useOnboarding();
-  const { translations = {} } = useLanguage();
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | undefined>(undefined);
-  const [formData, setFormData] = useState<FormData>(() => ({
-    businessName: state?.userData?.businessName || '',
-    firstName: state?.userData?.firstName || '',
-    lastName: state?.userData?.lastName || '',
-    email: state?.userData?.email || '',
-    instagram: state?.userData?.instagram || '',
-    phone: state?.userData?.phone || ''
-  }));
+  const [formData, setFormData] = useState<FormData>({
+    businessName: state.userData.businessName || "",
+    firstName: state.userData.firstName || "",
+    lastName: state.userData.lastName || "",
+    email: state.userData.email || "",
+    instagram: state.userData.instagram || "",
+    phone: state.userData.phone || ""
+  });
 
   const questions: Question[] = [
-    ...(state?.userData?.phone ? [] : [{
-      id: 'phone',
-      field: 'phone' as keyof FormData,
-      label: translations.signup?.phoneNumber?.title || '',
-      placeholder: translations.signup?.phoneNumber?.placeholder || '',
-      type: 'tel',
+    // Show phone input first for social login users who don't have phone
+    ...(state.userData.authMethod === 'social' && !state.userData.phone ? [{
+      id: "phone",
+      field: "phone" as keyof FormData,
+      label: "What's your phone number?",
+      placeholder: "Enter your phone number",
+      type: "tel",
       required: true
-    }]),
+    }] : []),
     {
-      id: 'businessName',
-      field: 'businessName' as keyof FormData,
-      label: translations.signup?.businessName?.title || '',
-      placeholder: translations.signup?.businessName?.placeholder || '',
-      type: 'text'
+      id: "businessName",
+      field: "businessName" as keyof FormData,
+      label: "What's your business name?",
+      placeholder: "Enter business name (optional)",
+      type: "text",
     },
     {
-      id: 'firstName',
-      field: 'firstName' as keyof FormData,
-      label: translations.signup?.firstName?.title || '',
-      placeholder: translations.signup?.firstName?.placeholder || '',
-      type: 'text',
-      required: true
-    },
-    {
-      id: 'lastName',
-      field: 'lastName' as keyof FormData,
-      label: translations.signup?.lastName?.title || '',
-      placeholder: translations.signup?.lastName?.placeholder || '',
-      type: 'text',
-      required: true
-    },
-    ...(state?.userData?.email ? [] : [{
-      id: 'email',
-      field: 'email' as keyof FormData,
-      label: translations.signup?.email?.title || '',
-      placeholder: translations.signup?.email?.placeholder || '',
-      type: 'email',
+      id: "firstName",
+      field: "firstName" as keyof FormData,
+      label: "What's your first name?",
+      placeholder: "Enter your first name",
+      type: "text",
       required: true,
-      validate: (value: string) => !validateEmail(value) ? translations.signup?.validation?.email : undefined
-    }]),
+    },
     {
-      id: 'instagram',
-      field: 'instagram' as keyof FormData,
-      label: translations.signup?.instagram?.title || '',
-      placeholder: translations.signup?.instagram?.placeholder || '',
-      type: 'text'
-    }
+      id: "lastName",
+      field: "lastName" as keyof FormData,
+      label: "What's your last name?",
+      placeholder: "Enter your last name",
+      type: "text",
+      required: true,
+    },
+    ...(state.userData.email
+      ? []
+      : [
+          {
+            id: "email",
+            field: "email" as keyof FormData,
+            label: "What's your email address?",
+            placeholder: "Enter your email",
+            type: "email",
+            required: true,
+            validate: (value: string) =>
+              !validateEmail(value)
+                ? "Please enter a valid email address"
+                : undefined,
+          },
+        ]),
+    {
+      id: "instagram",
+      field: "instagram" as keyof FormData,
+      label: "What's your Instagram handle?",
+      placeholder: "@yourbusiness",
+      type: "text",
+    },
   ];
 
   const currentQuestion = questions[currentQuestionIndex];
 
   const handleInputChange = (value: string) => {
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [currentQuestion.field]: value
+      [currentQuestion.field]: value,
     }));
     setError(undefined);
   };
 
   const validateCurrentQuestion = (): boolean => {
     if (currentQuestion.required && !formData[currentQuestion.field]) {
-      setError(translations.signup?.validation?.required || undefined);
+      setError("This field is required");
       return false;
     }
 
     if (currentQuestion.validate) {
-      const validationError = currentQuestion.validate(formData[currentQuestion.field]);
+      const validationError = currentQuestion.validate(
+        formData[currentQuestion.field]
+      );
       if (validationError) {
         setError(validationError);
         return false;
@@ -124,31 +133,36 @@ export default function SignUpForm() {
     if (!validateCurrentQuestion()) return;
 
     if (currentQuestionIndex < questions.length - 1) {
-      setCurrentQuestionIndex(prev => prev + 1);
+      setCurrentQuestionIndex((prev) => prev + 1);
     } else {
       setLoading(true);
       try {
-        // Update form data and ensure phone is preserved
-        dispatch({
-          type: 'SET_USER_DATA',
-          payload: {
-            ...formData,
-            // Preserve existing phone if it exists, otherwise use form data phone
-            phone: state.userData.phone || formData.phone,
-            // Set auth method to indicate this is from signup form
-            authMethod: formData.phone ? 'phone' : 'email'
-          }
-        });
-
-        // Skip verification steps for social login
-        if (state.userData.authMethod === 'social') {
-          dispatch({ type: 'SET_STEP', payload: 5 }); // Go directly to ServicesSelection
+        // For social login users who just entered phone
+        if (state.userData.authMethod === 'social' && currentQuestion.field === 'phone') {
+          // Only update the phone number
+          dispatch({
+            type: "SET_USER_DATA",
+            payload: { 
+              ...state.userData,
+              phone: formData.phone 
+            }
+          });
         } else {
-          dispatch({ type: 'SET_STEP', payload: 3 }); // Go to VerificationCode
+          // For non-social users, update all form data
+          dispatch({
+            type: "SET_USER_DATA",
+            payload: {
+              ...state.userData,
+              ...formData
+            }
+          });
         }
+
+        // Move to verification step
+        dispatch({ type: "SET_STEP", payload: 3 });
       } catch (err) {
-        console.error('Error saving user data:', err);
-        setError('Something went wrong. Please try again.');
+        console.error("Error saving user data:", err);
+        setError("Something went wrong. Please try again.");
       } finally {
         setLoading(false);
       }
@@ -156,7 +170,7 @@ export default function SignUpForm() {
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter' && !loading) {
+    if (e.key === "Enter" && !loading) {
       handleNext();
     }
   };
@@ -172,15 +186,15 @@ export default function SignUpForm() {
       >
         <div className="text-center space-y-4">
           <Heading>{currentQuestion.label}</Heading>
-          {currentQuestion.field === 'businessName' && (
+          {currentQuestion.field === "businessName" && (
             <Text className="text-gray-500 dark:text-gray-400">
-              {translations.signup?.businessName?.hint || ''}
+              You can add this later if you're not sure yet
             </Text>
           )}
         </div>
 
         <div className="max-w-md mx-auto">
-          {currentQuestion.field === 'phone' ? (
+          {currentQuestion.type === 'tel' ? (
             <PhoneInput
               value={formData[currentQuestion.field]}
               onChange={handleInputChange}
@@ -207,8 +221,11 @@ export default function SignUpForm() {
               disabled={loading}
               className="w-full max-w-xs"
             >
-              {loading ? 'Please wait...' : 
-               currentQuestionIndex === questions.length - 1 ? translations.signup?.complete || '' : translations.signup?.continue || ''}
+              {loading
+                ? "Please wait..."
+                : currentQuestionIndex === questions.length - 1
+                ? "Complete"
+                : "Continue"}
             </Button>
 
             <div className="flex gap-2 mt-4">
@@ -217,10 +234,10 @@ export default function SignUpForm() {
                   key={index}
                   className={`w-2 h-2 rounded-full transition-all duration-300 ${
                     index === currentQuestionIndex
-                      ? 'w-8 bg-primary-gold'
+                      ? "w-8 bg-primary-gold"
                       : index < currentQuestionIndex
-                      ? 'bg-primary-gold'
-                      : 'bg-gray-200 dark:bg-gray-700'
+                      ? "bg-primary-gold"
+                      : "bg-gray-200 dark:bg-gray-700"
                   }`}
                 />
               ))}

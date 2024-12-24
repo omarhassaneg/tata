@@ -1,6 +1,6 @@
 {
   "auth": {
-    "title": "Iniciar sesión o Registrarse",
+    "title": "Iniciar Sesión o Registrarse",
     "subtitle": "Crea una cuenta o inicia sesión para gestionar tu negocio",
     "continueWithEmail": "Continuar con correo electrónico",
     "continueWithPhone": "Continuar con teléfono",
@@ -10,48 +10,112 @@
     "phoneNumber": "Número de teléfono",
     "emailAddress": "Correo electrónico",
     "continue": "Continuar",
-    "pleaseWait": "Por favor espere..."
+    "pleaseWait": "Por favor, espera..."
+  },
+  "signup": {
+    "businessName": {
+      "title": "¿Cuál es el nombre de tu negocio?",
+      "placeholder": "Introduce el nombre del negocio (opcional)",
+      "hint": "Si no estás seguro, puedes agregarlo más tarde"
+    },
+    "firstName": {
+      "title": "¿Cuál es tu nombre?",
+      "placeholder": "Introduce tu nombre"
+    },
+    "lastName": {
+      "title": "¿Cuál es tu apellido?",
+      "placeholder": "Introduce tu apellido"
+    },
+    "email": {
+      "title": "¿Cuál es tu correo electrónico?",
+      "placeholder": "Introduce tu correo electrónico"
+    },
+    "instagram": {
+      "title": "¿Cuál es tu usuario de Instagram?",
+      "placeholder": "@tubusiness"
+    },
+    "complete": "Completar",
+    "continue": "Continuar",
+    "validation": {
+      "required": "Este campo es obligatorio",
+      "email": "Por favor, introduce un correo electrónico válido"
+    }
+  },
+  "verification": {
+    "phone": {
+      "title": "Verifica tu teléfono",
+      "message": "Se envió un código de verificación al {phone}",
+      "socialMessage": "El código de verificación fue enviado a tu número de teléfono"
+    },
+    "email": {
+      "title": "Verifica tu correo electrónico",
+      "message": "Introduce el código de 4 dígitos enviado a {email}"
+    },
+    "common": {
+      "codeExpires": "El código expirará en {seconds} segundos",
+      "resendCode": "Reenviar código"
+    }
+  },
+  "services": {
+    "title": "¡Selecciona los servicios que ofreces!",
+    "subtitle": "Selecciona los servicios que ofreces. Puedes agregar o quitar servicios más tarde.",
+    "categories": {
+      "makeup": "Maquillaje",
+      "nails": "Uñas",
+      "sprayTan": "Bronceado en spray",
+      "hair": "Cabello",
+      "waxing": "Depilación",
+      "esthetics": "Estética",
+      "henna": "Henna",
+      "eyelashes": "Pestañas",
+      "eyelashesEyebrows": "Pestañas y Cejas",
+      "hairstyling": "Estilismo",
+      "barber": "Barbería",
+      "wedding": "Boda"
+    },
+    "continue": "Continuar",
+    "saving": "Guardando..."
   },
   "location": {
     "title": "¿Dónde ofreces tus servicios?",
-    "subtitle": "Selecciona dónde te gustaría proporcionar tus servicios. Puedes ser móvil, trabajar desde un estudio, o ambos.",
+    "subtitle": "Elige dónde deseas ofrecer tus servicios. Puede ser móvil, en un estudio o ambos.",
     "mobile": {
       "title": "Servicios Móviles",
-      "description": "Viaja a la ubicación de tus clientes"
+      "description": "Desplázate al lugar de tus clientes"
     },
     "studio": {
       "title": "Servicios en Estudio",
-      "description": "Los clientes vienen a tu ubicación"
+      "description": "Los clientes vienen a ti"
     },
     "continue": "Continuar",
     "saving": "Guardando..."
   },
   "address": {
-    "title": "Ingresa tu dirección base",
-    "subtitle": "Agrega la ubicación de tu estudio o punto de partida para servicios móviles. Esto nos ayuda a calcular las distancias de viaje con precisión.",
+    "title": "Introduce tu dirección principal",
+    "subtitle": "Agrega la ubicación de tu estudio o el punto de partida para servicios móviles. Esto nos ayudará a calcular las distancias correctamente.",
     "searchPlaceholder": "Buscar dirección...",
     "billingAddress": {
-      "same": "La dirección de facturación es la misma que la dirección base",
-      "title": "Dirección de facturación",
+      "same": "La dirección de facturación es igual a la dirección principal",
+      "title": "Dirección de Facturación",
       "searchPlaceholder": "Buscar dirección de facturación..."
     },
     "continue": "Continuar",
     "saving": "Guardando...",
     "validation": {
-      "selectAddress": "Por favor selecciona una dirección válida de las sugerencias",
-      "selectBilling": "Por favor selecciona una dirección de facturación válida de las sugerencias"
+      "selectAddress": "Por favor, selecciona una dirección válida de las sugerencias",
+      "selectBilling": "Por favor, selecciona una dirección de facturación válida de las sugerencias"
     }
   },
   "serviceArea": {
-    "title": "Tu cobertura",
-    "subtitle": "Hemos configurado algunos ajustes recomendados basados en los estándares de la industria. Puedes personalizar estos valores según las necesidades de tu negocio.",
+    "title": "Tu área de servicio",
+    "subtitle": "Hemos definido algunos ajustes recomendados según los estándares del sector. Puedes personalizar estos valores según tus necesidades.",
     "radius": {
-      "title": "km de radio",
+      "title": "radio en km",
       "description": "Área de servicio alrededor de {address}"
     },
     "travelFee": {
       "title": "/ km",
-      "description": "Tarifa de viaje por km"
+      "description": "Tarifa por kilómetro"
     },
     "minimumFee": {
       "title": "tarifa mínima de viaje",
@@ -66,27 +130,27 @@
   },
   "success": {
     "title": "Información básica completada",
-    "subtitle": "Ahora, revisemos tu configuración",
+    "subtitle": "Ahora revisemos tus configuraciones",
     "continue": "Continuar"
   },
   "serviceConfirmation": {
-    "badge": "Servicios agregados",
-    "title": "Tus servicios",
-    "addedToProfile": "Agregado a tu perfil",
+    "badge": "Servicios Añadidos",
+    "title": "Tus Servicios",
+    "addedToProfile": "Añadido a tu perfil",
     "pricing": {
-      "value": "Precios estándar de la industria",
+      "value": "Precios estándar del sector",
       "label": "Precios aplicados"
     },
     "addons": {
-      "value": "Complementos agregados",
-      "label": "Ajusta duraciones y precios más tarde"
+      "value": "Servicios adicionales añadidos",
+      "label": "Ajusta las duraciones y precios más tarde"
     },
     "continue": "Continuar"
   },
   "policies": {
-    "badge": "Protección del negocio",
-    "title": "Políticas y exenciones",
-    "subtitle": "Hemos creado políticas y exenciones completas para tu negocio, para que no tengas que empezar desde cero. Puedes personalizarlas según tus necesidades.",
+    "badge": "Protección del Negocio",
+    "title": "Políticas y Exenciones",
+    "subtitle": "Hemos creado políticas y exenciones completas para tu negocio para que no tengas que empezar desde cero. Puedes personalizarlas según tus necesidades.",
     "stats": {
       "policies": {
         "value": "10 Políticas",
@@ -100,11 +164,11 @@
     "continue": "Continuar"
   },
   "schedule": {
-    "badge": "Horario laboral",
-    "title": "Tu horario",
-    "subtitle": "Establece tus horas de servicio {type}",
+    "badge": "Horas de Trabajo",
+    "title": "Tu Horario",
+    "subtitle": "Configura tus horas de servicio para {type}",
     "types": {
-      "mobile": "móvil",
+      "mobile": "móviles",
       "studio": "en estudio"
     },
     "days": {
@@ -121,9 +185,42 @@
     "continue": "Continuar",
     "saving": "Guardando..."
   },
+  "balanceReminder": {
+    "badge": "Recordatorio de Saldo",
+    "title": "Recordatorio de Pago de Saldo",
+    "subtitle": "¿Cuándo deben recibir los clientes su primer recordatorio de pago?",
+    "options": {
+      "after": {
+        "label": "Después de completar la cita",
+        "description": "Envía un recordatorio al finalizar el servicio"
+      },
+      "24h": {
+        "label": "24 horas antes",
+        "description": "Ideal para confirmaciones de última hora"
+      },
+      "3d": {
+        "label": "3 días antes",
+        "description": "Recomendado para la mayoría de los servicios"
+      },
+      "1w": {
+        "label": "1 semana antes",
+        "description": "Adecuado para citas estándar"
+      },
+      "2w": {
+        "label": "2 semanas antes",
+        "description": "Ideal para servicios premium"
+      },
+      "1m": {
+        "label": "1 mes antes",
+        "description": "Perfecto para eventos importantes"
+      }
+    },
+    "save": "Guardar",
+    "saving": "Guardando..."
+  },
   "availability": {
-    "badge": "Configuración de reservas",
-    "title": "Tu disponibilidad",
+    "badge": "Configuraciones de Reserva",
+    "title": "Tu Disponibilidad",
     "bookingWindow": {
       "title": "Ventana de reserva anticipada",
       "options": {
@@ -136,7 +233,7 @@
       }
     },
     "minimumNotice": {
-      "title": "Aviso mínimo requerido",
+      "title": "Tiempo mínimo de aviso",
       "options": {
         "4h": "4 Horas",
         "6h": "6 Horas",
@@ -147,7 +244,7 @@
     },
     "rescheduleWindow": {
       "title": "Ventana de reprogramación",
-      "description": "Los clientes no pueden reprogramar o cancelar después de que esta ventana finalice",
+      "description": "Los clientes no podrán reprogramar o cancelar después de que esta ventana se cierre",
       "options": {
         "4h": "4 Horas",
         "6h": "6 Horas",

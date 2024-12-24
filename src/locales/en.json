@@ -1,41 +1,37 @@
 {
   "auth": {
-    "title": "Log in or Sign Up",
+    "title": "Log In or Sign Up",
     "subtitle": "Create an account or log in to manage your business",
-    "continueWithEmail": "Continue with email",
-    "continueWithPhone": "Continue with phone",
+    "continueWithEmail": "Continue with Email",
+    "continueWithPhone": "Continue with Phone",
     "continueWithGoogle": "Continue with Google",
     "continueWithApple": "Continue with Apple",
     "or": "OR",
-    "phoneNumber": "Phone number",
-    "emailAddress": "Email address",
+    "phoneNumber": "Phone Number",
+    "emailAddress": "Email Address",
     "continue": "Continue",
     "pleaseWait": "Please wait..."
   },
   "signup": {
     "businessName": {
-      "title": "What's your business name?",
-      "placeholder": "Enter business name (optional)",
-      "hint": "You can add this later if you're not sure yet"
+      "title": "What is the name of your business?",
+      "placeholder": "Enter your business name (optional)",
+      "hint": "If you're unsure, you can add this later"
     },
     "firstName": {
-      "title": "What's your first name?",
+      "title": "What is your first name?",
       "placeholder": "Enter your first name"
     },
     "lastName": {
-      "title": "What's your last name?",
+      "title": "What is your last name?",
       "placeholder": "Enter your last name"
     },
     "email": {
-      "title": "What's your email address?",
-      "placeholder": "Enter your email"
-    },
-    "phoneNumber": {
-      "title": "What's your phone number?",
-      "placeholder": "Enter your phone number"
+      "title": "What is your email address?",
+      "placeholder": "Enter your email address"
     },
     "instagram": {
-      "title": "What's your Instagram handle?",
+      "title": "What is your Instagram username?",
       "placeholder": "@yourbusiness"
     },
     "complete": "Complete",
@@ -45,26 +41,218 @@
       "email": "Please enter a valid email address"
     }
   },
-  "websiteSuccess": {
-    "settingsCompleted": "Settings Completed",
-    "designWebsite": "Now, let's design your website in under 1 minute",
+  "verification": {
+    "phone": {
+      "title": "Verify Your Phone",
+      "message": "A verification code has been sent to {phone}",
+      "socialMessage": "The verification code was sent to your phone number"
+    },
+    "email": {
+      "title": "Verify Your Email",
+      "message": "Enter the 4-digit code sent to {email}"
+    },
+    "common": {
+      "codeExpires": "The code expires in {seconds} seconds",
+      "resendCode": "Resend Code"
+    }
+  },
+  "services": {
+    "title": "Select the Services You Offer!",
+    "subtitle": "Select the services you offer. You can add or remove services later.",
+    "categories": {
+      "makeup": "Makeup",
+      "nails": "Nails",
+      "sprayTan": "Spray Tan",
+      "hair": "Hair",
+      "waxing": "Waxing",
+      "esthetics": "Esthetics",
+      "henna": "Henna",
+      "eyelashes": "Eyelashes",
+      "eyelashesEyebrows": "Eyelashes & Eyebrows",
+      "hairstyling": "Hairstyling",
+      "barber": "Barber",
+      "wedding": "Wedding"
+    },
+    "continue": "Continue",
+    "saving": "Saving..."
+  },
+  "location": {
+    "title": "Where Do You Provide Services?",
+    "subtitle": "Choose where you want to provide your services. It can be mobile, studio-based, or both.",
+    "mobile": {
+      "title": "Mobile Services",
+      "description": "Travel to your clients' locations"
+    },
+    "studio": {
+      "title": "Studio Services",
+      "description": "Clients come to you"
+    },
+    "continue": "Continue",
+    "saving": "Saving..."
+  },
+  "address": {
+    "title": "Enter Your Base Address",
+    "subtitle": "Add your studio location or a starting point for mobile services. This helps us calculate distances accurately.",
+    "searchPlaceholder": "Search for an address...",
+    "billingAddress": {
+      "same": "Billing address is the same as the base address",
+      "title": "Billing Address",
+      "searchPlaceholder": "Search for a billing address..."
+    },
+    "continue": "Continue",
+    "saving": "Saving...",
+    "validation": {
+      "selectAddress": "Please select a valid address from the suggestions",
+      "selectBilling": "Please select a valid billing address from the suggestions"
+    }
+  },
+  "serviceArea": {
+    "title": "Your Service Area",
+    "subtitle": "We’ve set some recommended settings based on industry standards. You can customize these values to suit your business needs.",
+    "radius": {
+      "title": "radius in km",
+      "description": "Service area around {address}"
+    },
+    "travelFee": {
+      "title": "/ km",
+      "description": "Charge per kilometer"
+    },
+    "minimumFee": {
+      "title": "minimum travel fee",
+      "description": "Regardless of distance"
+    },
+    "minimumSpend": {
+      "title": "minimum spend",
+      "description": "Minimum spend per booking"
+    },
+    "continue": "Continue",
+    "saving": "Saving..."
+  },
+  "success": {
+    "title": "Basic Information Complete",
+    "subtitle": "Now let’s review your settings",
     "continue": "Continue"
   },
-  "contactDisplaySettings": {
-    "title": "Contact Information",
-    "subtitle": "Choose which contact information to display on your website. You can change these settings anytime.",
-    "instagram": "Instagram",
-    "phoneNumber": "Phone Number",
-    "emailAddress": "Email Address",
-    "save": "Save",
-    "saving": "Saving...",
-    "error": "Failed to save settings. Please try again."
+  "serviceConfirmation": {
+    "badge": "Services Added",
+    "title": "Your Services",
+    "addedToProfile": "Added to your profile",
+    "pricing": {
+      "value": "Industry Standard Pricing",
+      "label": "Pricing applied"
+    },
+    "addons": {
+      "value": "Add-ons added",
+      "label": "Adjust durations and prices later"
+    },
+    "continue": "Continue"
   },
-  "websiteThemeSelection": {
-    "title": "Choose Your Style",
-    "websiteTheme": "Website Theme",
-    "saving": "Saving...",
+  "policies": {
+    "badge": "Business Protection",
+    "title": "Policies & Waivers",
+    "subtitle": "We’ve created comprehensive policies and waivers for your business so you don’t have to start from scratch. You can customize them to fit your needs.",
+    "stats": {
+      "policies": {
+        "value": "10 Policies",
+        "label": "Pre-written business policies"
+      },
+      "waivers": {
+        "value": "7 Waivers",
+        "label": "Ready-to-use protection agreements"
+      }
+    },
+    "continue": "Continue"
+  },
+  "schedule": {
+    "badge": "Working Hours",
+    "title": "Your Schedule",
+    "subtitle": "Set your hours for {type} services",
+    "types": {
+      "mobile": "mobile",
+      "studio": "studio"
+    },
+    "days": {
+      "monday": "Monday",
+      "tuesday": "Tuesday",
+      "wednesday": "Wednesday",
+      "thursday": "Thursday",
+      "friday": "Friday",
+      "saturday": "Saturday",
+      "sunday": "Sunday"
+    },
+    "dayOff": "Day off",
+    "to": "to",
+    "continue": "Continue",
+    "saving": "Saving..."
+  },
+  "balanceReminder": {
+    "badge": "Balance Reminder",
+    "title": "Balance Payment Reminder",
+    "subtitle": "When should clients receive their first payment reminder?",
+    "options": {
+      "after": {
+        "label": "After appointment is completed",
+        "description": "Send a reminder once the service is complete"
+      },
+      "24h": {
+        "label": "24 Hours Before",
+        "description": "Best for last-minute confirmations"
+      },
+      "3d": {
+        "label": "3 Days Before",
+        "description": "Recommended for most services"
+      },
+      "1w": {
+        "label": "1 Week Before",
+        "description": "Suitable for standard appointments"
+      },
+      "2w": {
+        "label": "2 Weeks Before",
+        "description": "Ideal for premium services"
+      },
+      "1m": {
+        "label": "1 Month Before",
+        "description": "Perfect for important events"
+      }
+    },
     "save": "Save",
-    "error": "Failed to save theme. Please try again."
+    "saving": "Saving..."
+  },
+  "availability": {
+    "badge": "Booking Settings",
+    "title": "Your Availability",
+    "bookingWindow": {
+      "title": "Advance booking window",
+      "options": {
+        "1m": "1 Month",
+        "2m": "2 Months",
+        "3m": "3 Months",
+        "6m": "6 Months",
+        "1y": "1 Year",
+        "18m": "18 Months"
+      }
+    },
+    "minimumNotice": {
+      "title": "Minimum required notice",
+      "options": {
+        "4h": "4 Hours",
+        "6h": "6 Hours",
+        "24h": "24 Hours",
+        "2d": "2 Days",
+        "1w": "1 Week"
+      }
+    },
+    "rescheduleWindow": {
+      "title": "Reschedule window",
+      "description": "Clients won’t be able to reschedule or cancel after this window closes",
+      "options": {
+        "4h": "4 Hours",
+        "6h": "6 Hours",
+        "24h": "24 Hours",
+        "2d": "2 Days",
+        "1w": "1 Week"
+      }
+    },
+    "save": "Save"
   }
 }

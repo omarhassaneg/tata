@@ -8,19 +8,8 @@ import { useLanguage } from '../context/LanguageContext';
 
 export default function VerificationCode() {
   const { state, dispatch } = useOnboarding();
-  const { translations } = useLanguage();
-
-  // Skip verification entirely for social logins
-  useEffect(() => {
-    if (state.userData.authMethod === 'social') {
-      console.log('Social login detected - skipping verification entirely');
-      dispatch({ type: 'SET_STEP', payload: 5 }); // Go directly to services
-      return;
-    }
-  }, [state.userData.authMethod, dispatch]);
-
   const [timeLeft, setTimeLeft] = useState(59);
-  const [code, setCode] = useState(['', '', '', '']);
+  const [code, setCode] = useState(["", "", "", ""]);
   const firstInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -37,54 +26,112 @@ export default function VerificationCode() {
     }
   }, []);
 
-  const handleCodeChange = (index: number, value: string) => {
+  const handleCodeChange = async (index: number, value: string) => {
     if (value.length <= 1 && /^\d*$/.test(value)) {
       const newCode = [...code];
       newCode[index] = value;
-      console.log('Code digit entered:', { index, value });
+      console.log("Code digit entered:", { index, value });
       setCode(newCode);
 
       // Auto-focus next input
       if (value && index < 3) {
-        console.log('Moving focus to next input');
+        console.log("Moving focus to next input");
         const nextInput = document.getElementById(`code-${index + 1}`);
         nextInput?.focus();
       }
 
       // If all digits are filled, proceed
       if (newCode.every((digit) => digit) && value) {
-        console.log('Verification code complete:', newCode.join(''));
-        dispatch({
-          type: 'SET_USER_DATA', 
-          payload: { phoneVerificationCode: newCode.join('') },
-        });
-        
-        // For non-social logins, proceed to email verification
-        console.log('Standard auth flow - proceeding to email verification');
-        dispatch({ type: 'SET_STEP', payload: 4 }); // Go to email verification
+        console.log("Verification code complete:", newCode.join(""));
+        try {
+          dispatch({ type: "SET_LOADING", payload: true });
+          dispatch({
+            type: "SET_USER_DATA",
+            payload: { phoneVerificationCode: newCode.join("") },
+          });
+
+          // Simulate API verification (replace with actual API call)
+          await new Promise(resolve => setTimeout(resolve, 1000));
+
+          // If social login, skip email verification
+          if (state.userData.authMethod === "social") {
+            console.log("Social login detected - skipping email verification");
+            dispatch({ type: "SET_STEP", payload: 5 }); // Go to services
+          } else {
+            console.log("Standard auth flow - proceeding to email verification");
+            dispatch({ type: "SET_STEP", payload: 4 }); // Go to email verification
+          }
+        } catch (error) {
+          console.error('Verification error:', error);
+          dispatch({ 
+            type: "SET_ERROR", 
+            payload: "Verification failed. Please try again." 
+          });
+        } finally {
+          dispatch({ type: "SET_LOADING", payload: false });
+        }
       }
     }
   };
 
   const handleKeyDown = (index: number, e: React.KeyboardEvent) => {
-    if (e.key === 'Backspace' && !code[index] && index > 0) {
+    if (e.key === "Backspace" && !code[index] && index > 0) {
       const prevInput = document.getElementById(`code-${index - 1}`);
       prevInput?.focus();
     }
   };
 
+  if (state.loading) {
+    return (
+      <Layout maxWidth="md">
+        <div className="flex flex-col items-center justify-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-gold"></div>
+          <p className="mt-4 text-gray-600 dark:text-gray-400">Verifying...</p>
+        </div>
+      </Layout>
+    );
+  }
+
+  if (state.error) {
+    return (
+      <Layout maxWidth="md">
+        <div className="text-center">
+          <p className="text-red-500 dark:text-red-400 mb-4">{state.error}</p>
+          <button
+            onClick={() => {
+              dispatch({ type: "SET_ERROR", payload: null });
+              setCode(["", "", "", ""]);
+              if (firstInputRef.current) {
+                firstInputRef.current.focus();
+              }
+            }}
+            className="text-primary-gold hover:text-primary-gold/80"
+          >
+            Try Again
+          </button>
+        </div>
+      </Layout>
+    );
+  }
+
   return (
     <Layout maxWidth="md">
       <Heading className="mb-4 text-center">
-        {translations?.verification?.phone?.title || 'Verify your phone'}
+        {state.userData.authMethod === "phone"
+          ? "Verify Your Phone"
+          : "Verify Your Phone Number"}
       </Heading>
 
       <Text className="text-center mb-8">
-        {(translations?.verification?.phone?.message || 'A verification code has been sent to your phone number: {phone}')
-          .replace('{phone}', state.userData.phone || '')}
+        {state.userData.phone
+          ? `A verification code has been sent to ${state.userData.phone}`
+          : "A verification code has been sent to your phone number"}
       </Text>
-      
-      <motion.div {...staggerChildren} className="flex justify-center gap-4 mb-8">
+
+      <motion.div
+        {...staggerChildren}
+        className="flex justify-center gap-4 mb-8"
+      >
         {code.map((digit, index) => (
           <input
             key={index}
@@ -100,18 +147,15 @@ export default function VerificationCode() {
           />
         ))}
       </motion.div>
-      
-      <Text className="text-center">
-        {(translations?.verification?.common?.codeExpires || 'Code expires in {seconds} seconds')
-          .replace('{seconds}', timeLeft.toString())}
-      </Text>
-      
+
+      <Text className="text-center">Code expires in {timeLeft} seconds</Text>
+
       {timeLeft === 0 && (
         <button
           onClick={() => setTimeLeft(59)}
           className="mt-4 w-full text-primary-gold dark:text-primary-gold py-2 hover:text-primary-gold/80"
         >
-          {translations?.verification?.common?.resendCode || 'Resend code'}
+          Resend Code
         </button>
       )}
     </Layout>

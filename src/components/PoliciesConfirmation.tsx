@@ -48,12 +48,12 @@ export default function PoliciesConfirmation() {
             className="inline-flex items-center gap-2 bg-primary-gold/10 text-primary-gold px-4 py-2 rounded-full mb-4"
           >
             <Shield className="w-4 h-4" />
-            <span className="text-sm font-medium">{translations.policies.badge}</span>
+            <span className="text-sm font-medium">{translations?.policies?.badge || "Business Protection"}</span>
           </motion.div>
         
-          <Heading>{translations.policies.title}</Heading>
+          <Heading>{translations?.policies?.title || "Policies & Waivers"}</Heading>
           <Text className="text-center mb-8 max-w-xl mx-auto">
-            {translations.policies.subtitle}
+            {translations?.policies?.subtitle || "We've created comprehensive policies and waivers for your business so you don't have to start from scratch. You can customize them to fit your needs."}
           </Text>
         </div>
 
@@ -64,14 +64,14 @@ export default function PoliciesConfirmation() {
         >
           <StatCard
             icon={<FileCheck className="w-5 h-5" />}
-            value={translations.policies.stats.policies.value}
-            label={translations.policies.stats.policies.label}
+            value={translations?.policies?.stats?.policies?.value || "10 Policies"}
+            label={translations?.policies?.stats?.policies?.label || "Pre-written business policies"}
           />
         
           <StatCard
             icon={<ScrollText className="w-5 h-5" />}
-            value={translations.policies.stats.waivers.value}
-            label={translations.policies.stats.waivers.label}
+            value={translations?.policies?.stats?.waivers?.value || "7 Waivers"}
+            label={translations?.policies?.stats?.waivers?.label || "Ready-to-use protection agreements"}
           />
         </motion.div>
 
@@ -85,7 +85,7 @@ export default function PoliciesConfirmation() {
             className="w-full"
             fullWidth
           >
-            {translations.policies.continue}
+            {translations?.policies?.continue || "Continue"}
           </Button>
         </motion.div>
     </Layout>

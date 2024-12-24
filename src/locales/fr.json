@@ -1,9 +1,9 @@
 {
   "auth": {
-    "title": "Se connecter ou S'inscrire",
+    "title": "Connexion ou Inscription",
     "subtitle": "Créez un compte ou connectez-vous pour gérer votre entreprise",
-    "continueWithEmail": "Continuer avec e-mail",
-    "continueWithPhone": "Continuer avec téléphone",
+    "continueWithEmail": "Continuer avec l'email",
+    "continueWithPhone": "Continuer avec le téléphone",
     "continueWithGoogle": "Continuer avec Google",
     "continueWithApple": "Continuer avec Apple",
     "or": "OU",
@@ -12,26 +12,90 @@
     "continue": "Continuer",
     "pleaseWait": "Veuillez patienter..."
   },
+  "signup": {
+    "businessName": {
+      "title": "Quel est le nom de votre entreprise ?",
+      "placeholder": "Entrez le nom de l'entreprise (facultatif)",
+      "hint": "Si vous n'êtes pas sûr, vous pouvez l'ajouter plus tard"
+    },
+    "firstName": {
+      "title": "Quel est votre prénom ?",
+      "placeholder": "Entrez votre prénom"
+    },
+    "lastName": {
+      "title": "Quel est votre nom de famille ?",
+      "placeholder": "Entrez votre nom de famille"
+    },
+    "email": {
+      "title": "Quelle est votre adresse e-mail ?",
+      "placeholder": "Entrez votre adresse e-mail"
+    },
+    "instagram": {
+      "title": "Quel est votre nom d'utilisateur Instagram ?",
+      "placeholder": "@votreentreprise"
+    },
+    "complete": "Terminer",
+    "continue": "Continuer",
+    "validation": {
+      "required": "Ce champ est requis",
+      "email": "Veuillez entrer une adresse e-mail valide"
+    }
+  },
+  "verification": {
+    "phone": {
+      "title": "Vérifiez votre téléphone",
+      "message": "Un code de vérification a été envoyé au {phone}",
+      "socialMessage": "Le code de vérification a été envoyé à votre numéro de téléphone"
+    },
+    "email": {
+      "title": "Vérifiez votre e-mail",
+      "message": "Entrez le code à 4 chiffres envoyé à {email}"
+    },
+    "common": {
+      "codeExpires": "Le code expire dans {seconds} secondes",
+      "resendCode": "Renvoyer le code"
+    }
+  },
+  "services": {
+    "title": "Choisissez les services que vous proposez !",
+    "subtitle": "Sélectionnez les services que vous proposez. Vous pouvez ajouter ou supprimer des services plus tard.",
+    "categories": {
+      "makeup": "Maquillage",
+      "nails": "Ongles",
+      "sprayTan": "Bronzage en spray",
+      "hair": "Cheveux",
+      "waxing": "Épilation à la cire",
+      "esthetics": "Esthétique",
+      "henna": "Henné",
+      "eyelashes": "Cils",
+      "eyelashesEyebrows": "Cils et Sourcils",
+      "hairstyling": "Coiffure",
+      "barber": "Barbier",
+      "wedding": "Mariage"
+    },
+    "continue": "Continuer",
+    "saving": "Enregistrement..."
+  },
   "location": {
     "title": "Où proposez-vous vos services ?",
-    "subtitle": "Sélectionnez où vous souhaitez fournir vos services. Vous pouvez être mobile, travailler depuis un studio, ou les deux.",
+    "subtitle": "Choisissez où vous souhaitez offrir vos services. Cela peut être mobile, en studio ou les deux.",
     "mobile": {
-      "title": "Services Mobiles",
-      "description": "Déplacez-vous chez vos clients"
+      "title": "Services mobiles",
+      "description": "Rendez-vous chez vos clients"
     },
     "studio": {
-      "title": "Services en Studio",
-      "description": "Les clients viennent à vous"
+      "title": "Services en studio",
+      "description": "Les clients viennent chez vous"
     },
     "continue": "Continuer",
     "saving": "Enregistrement..."
   },
   "address": {
-    "title": "Entrez votre adresse de base",
-    "subtitle": "Ajoutez l'emplacement de votre studio ou le point de départ pour les services mobiles. Cela nous aide à calculer précisément les distances de déplacement.",
+    "title": "Entrez votre adresse principale",
+    "subtitle": "Ajoutez l'emplacement de votre studio ou le point de départ pour les services mobiles. Cela nous aide à calculer les distances correctement.",
     "searchPlaceholder": "Rechercher une adresse...",
     "billingAddress": {
-      "same": "L'adresse de facturation est identique à l'adresse de base",
+      "same": "L'adresse de facturation est la même que l'adresse principale",
       "title": "Adresse de facturation",
       "searchPlaceholder": "Rechercher une adresse de facturation..."
     },
@@ -43,30 +107,30 @@
     }
   },
   "serviceArea": {
-    "title": "Votre zone de couverture",
-    "subtitle": "Nous avons configuré des paramètres recommandés basés sur les standards de l'industrie. Vous pouvez personnaliser ces valeurs selon vos besoins.",
+    "title": "Votre zone de service",
+    "subtitle": "Nous avons défini quelques paramètres recommandés en fonction des standards du secteur. Vous pouvez personnaliser ces valeurs selon vos besoins.",
     "radius": {
-      "title": "km de rayon",
+      "title": "rayon en km",
       "description": "Zone de service autour de {address}"
     },
     "travelFee": {
       "title": "/ km",
-      "description": "Frais de déplacement par km"
+      "description": "Frais par kilomètre"
     },
     "minimumFee": {
-      "title": "frais minimum de déplacement",
-      "description": "Quelle que soit la distance"
+      "title": "frais de déplacement minimum",
+      "description": "Indépendant de la distance"
     },
     "minimumSpend": {
-      "title": "dépense minimum",
-      "description": "Dépense minimum par réservation"
+      "title": "dépense minimale",
+      "description": "Dépense minimale par réservation"
     },
     "continue": "Continuer",
     "saving": "Enregistrement..."
   },
   "success": {
     "title": "Informations de base complétées",
-    "subtitle": "Maintenant, passons en revue vos paramètres",
+    "subtitle": "Examinons maintenant vos paramètres",
     "continue": "Continuer"
   },
   "serviceConfirmation": {
@@ -74,23 +138,23 @@
     "title": "Vos services",
     "addedToProfile": "Ajouté à votre profil",
     "pricing": {
-      "value": "Prix standard du secteur",
+      "value": "Tarification standard du secteur",
       "label": "Tarification appliquée"
     },
     "addons": {
-      "value": "Suppléments ajoutés",
+      "value": "Services supplémentaires ajoutés",
       "label": "Ajustez les durées et les prix plus tard"
     },
     "continue": "Continuer"
   },
   "policies": {
     "badge": "Protection de l'entreprise",
-    "title": "Politiques et décharges",
-    "subtitle": "Nous avons créé des politiques et des décharges complètes pour votre entreprise, vous n'avez donc pas à partir de zéro. Vous pouvez les personnaliser selon vos besoins.",
+    "title": "Politiques et Décharges",
+    "subtitle": "Nous avons créé des politiques et des décharges complètes pour votre entreprise afin que vous n'ayez pas à partir de zéro. Vous pouvez les personnaliser selon vos besoins.",
     "stats": {
       "policies": {
         "value": "10 Politiques",
-        "label": "Politiques d'entreprise pré-rédigées"
+        "label": "Politiques commerciales pré-rédigées"
       },
       "waivers": {
         "value": "7 Décharges",
@@ -102,9 +166,9 @@
   "schedule": {
     "badge": "Heures de travail",
     "title": "Votre emploi du temps",
-    "subtitle": "Définissez vos heures de service {type}",
+    "subtitle": "Définissez vos horaires pour les services {type}",
     "types": {
-      "mobile": "mobile",
+      "mobile": "mobiles",
       "studio": "en studio"
     },
     "days": {
@@ -119,6 +183,39 @@
     "dayOff": "Jour de repos",
     "to": "à",
     "continue": "Continuer",
+    "saving": "Enregistrement..."
+  },
+  "balanceReminder": {
+    "badge": "Rappel de solde",
+    "title": "Rappel de paiement du solde",
+    "subtitle": "Quand les clients doivent-ils recevoir leur premier rappel de paiement ?",
+    "options": {
+      "after": {
+        "label": "Après la fin du rendez-vous",
+        "description": "Envoyer un rappel une fois le service terminé"
+      },
+      "24h": {
+        "label": "24 heures avant",
+        "description": "Idéal pour les confirmations de dernière minute"
+      },
+      "3d": {
+        "label": "3 jours avant",
+        "description": "Recommandé pour la plupart des services"
+      },
+      "1w": {
+        "label": "1 semaine avant",
+        "description": "Convient pour les rendez-vous standards"
+      },
+      "2w": {
+        "label": "2 semaines avant",
+        "description": "Idéal pour les services premium"
+      },
+      "1m": {
+        "label": "1 mois avant",
+        "description": "Parfait pour les événements importants"
+      }
+    },
+    "save": "Enregistrer",
     "saving": "Enregistrement..."
   },
   "availability": {
@@ -136,7 +233,7 @@
       }
     },
     "minimumNotice": {
-      "title": "Préavis minimum requis",
+      "title": "Délai de préavis minimal",
       "options": {
         "4h": "4 Heures",
         "6h": "6 Heures",
@@ -147,7 +244,7 @@
     },
     "rescheduleWindow": {
       "title": "Fenêtre de replanification",
-      "description": "Les clients ne peuvent pas replanifier ou annuler après la fin de cette fenêtre",
+      "description": "Les clients ne pourront plus replanifier ou annuler après la fermeture de cette fenêtre",
       "options": {
         "4h": "4 Heures",
         "6h": "6 Heures",
