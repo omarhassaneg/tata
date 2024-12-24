@@ -292,5 +292,29 @@
     "save": "Enregistrer",
     "saving": "Enregistrement...",
     "error": "Erreur lors de l'enregistrement du logo. Veuillez réessayer."
+  },
+  "websiteSuccess": {
+    "badge": "Configuration du Site Web",
+    "title": "Configuration Terminée",
+    "subtitle": "Maintenant, concevons votre site web en moins d'une minute",
+    "continue": "Continuer"
+  },
+  "contactDisplay": {
+    "badge": "Affichage des Contacts",
+    "title": "Informations de Contact",
+    "subtitle": "Choisissez quelles informations de contact afficher sur votre site web. Vous pouvez modifier ces paramètres à tout moment.",
+    "instagram": {
+      "title": "Instagram",
+      "placeholder": "@votreentreprise"
+    },
+    "phone": {
+      "title": "Numéro de Téléphone"
+    },
+    "email": {
+      "title": "Adresse E-mail"
+    },
+    "save": "Enregistrer",
+    "saving": "Enregistrement...",
+    "error": "Erreur lors de l'enregistrement des paramètres. Veuillez réessayer."
   }
 }

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useOnboarding } from '../context/OnboardingContext';
+import { useLanguage } from '../context/LanguageContext';
 import { Heading, Text } from './ui/Typography';
 import { Button } from './ui/Button';
 import { Input } from './ui/Input';
@@ -81,6 +82,7 @@ function ContactOption({
 
 export default function ContactDisplaySettings() {
   const { state, dispatch } = useOnboarding();
+  const { translations } = useLanguage();
   const { userData } = state;
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -149,23 +151,22 @@ export default function ContactDisplaySettings() {
           className="inline-flex items-center gap-2 bg-primary-gold/10 text-primary-gold px-4 py-2 rounded-full mb-4"
         >
           <Eye className="w-4 h-4" />
-          <span className="text-sm font-medium">Contact Display</span>
+          <span className="text-sm font-medium">{translations?.contactDisplay?.badge || "Contact Display"}</span>
         </motion.div>
 
-        <Heading className="mb-4">Contact Information</Heading>
+        <Heading className="mb-4">{translations?.contactDisplay?.title || "Contact Information"}</Heading>
 
         <Text className="max-w-md mx-auto">
-          Choose which contact information to display on your website. You can
-          change these settings anytime.
+          {translations?.contactDisplay?.subtitle || "Choose which contact information to display on your website. You can change these settings anytime."}
         </Text>
       </div>
 
       <motion.div variants={staggerChildren} className="space-y-4 mb-12">
         <ContactOption
           icon={<Instagram className="w-5 h-5" />}
-          title="Instagram"
+          title={translations?.contactDisplay?.instagram?.title || "Instagram"}
           value={userData.instagram || ""}
-          placeholder="@yourbusiness"
+          placeholder={translations?.contactDisplay?.instagram?.placeholder || "@yourbusiness"}
           isVisible={userData.displaySettings?.showInstagram ?? true}
           onToggle={() => handleToggle("showInstagram")}
           onChange={handleChange("instagram")}
@@ -173,7 +174,7 @@ export default function ContactDisplaySettings() {
 
         <ContactOption
           icon={<Phone className="w-5 h-5" />}
-          title="Phone Number"
+          title={translations?.contactDisplay?.phone?.title || "Phone Number"}
           value={userData.phone}
           placeholder={userData.phone}
           isVisible={userData.displaySettings?.showPhone ?? false}
@@ -183,7 +184,7 @@ export default function ContactDisplaySettings() {
 
         <ContactOption
           icon={<Mail className="w-5 h-5" />}
-          title="Email Address"
+          title={translations?.contactDisplay?.email?.title || "Email Address"}
           value={userData.email}
           placeholder={userData.email}
           isVisible={userData.displaySettings?.showEmail ?? false}
@@ -204,10 +205,10 @@ export default function ContactDisplaySettings() {
           disabled={loading}
           className="w-full"
         >
-          {loading ? "Saving..." : "Save"}
+          {loading ? (translations?.contactDisplay?.saving || "Saving...") : (translations?.contactDisplay?.save || "Save")}
         </Button>
 
-        {error && <p className="text-sm text-red-500 text-center">{error}</p>}
+        {error && <p className="text-sm text-red-500 text-center">{translations?.contactDisplay?.error || error}</p>}
       </motion.div>
     </Layout>
   );

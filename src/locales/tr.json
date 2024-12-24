@@ -292,5 +292,29 @@
     "save": "Kaydet",
     "saving": "Kaydediliyor...",
     "error": "Logo kaydedilirken hata oluştu. Lütfen tekrar deneyin."
+  },
+  "websiteSuccess": {
+    "badge": "Web Sitesi Kurulumu",
+    "title": "Ayarlar Tamamlandı",
+    "subtitle": "Şimdi, web sitenizi 1 dakikadan kısa sürede tasarlayalım",
+    "continue": "Devam et"
+  },
+  "contactDisplay": {
+    "badge": "İletişim Bilgileri Görünümü",
+    "title": "İletişim Bilgileri",
+    "subtitle": "Web sitenizde hangi iletişim bilgilerinin görüntüleneceğini seçin. Bu ayarları istediğiniz zaman değiştirebilirsiniz.",
+    "instagram": {
+      "title": "Instagram",
+      "placeholder": "@isletmeniz"
+    },
+    "phone": {
+      "title": "Telefon Numarası"
+    },
+    "email": {
+      "title": "E-posta Adresi"
+    },
+    "save": "Kaydet",
+    "saving": "Kaydediliyor...",
+    "error": "Ayarlar kaydedilirken hata oluştu. Lütfen tekrar deneyin."
   }
 }

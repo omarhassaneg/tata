@@ -4,6 +4,7 @@ import { Check, ArrowRight } from 'lucide-react';
 import { Heading, Text } from './ui/Typography';
 import { Button } from './ui/Button';
 import { useOnboarding } from '../context/OnboardingContext';
+import { useLanguage } from '../context/LanguageContext';
 
 const checkmarkVariants = {
   hidden: { 
@@ -51,6 +52,7 @@ const containerVariants = {
 
 export default function WebsiteSuccess() {
   const { dispatch } = useOnboarding();
+  const { translations } = useLanguage();
   return (
     <div className="min-h-[80vh] flex flex-col items-center justify-center px-4">
       <motion.div 
@@ -70,11 +72,11 @@ export default function WebsiteSuccess() {
           className="text-center space-y-6"
         >
           <Heading>
-            Settings Completed
+            {translations?.websiteSuccess?.title || "Settings Completed"}
           </Heading>
           
           <Text className="text-gray-600">
-            Now, let's design your website in under 1 minute
+            {translations?.websiteSuccess?.subtitle || "Now, let's design your website in under 1 minute"}
           </Text>
 
           <motion.div
@@ -86,7 +88,7 @@ export default function WebsiteSuccess() {
               className="group"
               onClick={() => dispatch({ type: 'SET_STEP', payload: 15 })}
             >
-              <span>Continue</span>
+              <span>{translations?.websiteSuccess?.continue || "Continue"}</span>
               <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
             </Button>
           </motion.div>

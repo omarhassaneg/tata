@@ -292,5 +292,29 @@
     "save": "Guardar",
     "saving": "Guardando...",
     "error": "Error al guardar el logo. Por favor, inténtalo de nuevo."
+  },
+  "websiteSuccess": {
+    "badge": "Configuración del Sitio Web",
+    "title": "Configuración Completada",
+    "subtitle": "Ahora, diseñemos tu sitio web en menos de 1 minuto",
+    "continue": "Continuar"
+  },
+  "contactDisplay": {
+    "badge": "Mostrar Contacto",
+    "title": "Información de Contacto",
+    "subtitle": "Elige qué información de contacto mostrar en tu sitio web. Puedes cambiar esta configuración en cualquier momento.",
+    "instagram": {
+      "title": "Instagram",
+      "placeholder": "@tunegocio"
+    },
+    "phone": {
+      "title": "Número de Teléfono"
+    },
+    "email": {
+      "title": "Correo Electrónico"
+    },
+    "save": "Guardar",
+    "saving": "Guardando...",
+    "error": "Error al guardar la configuración. Por favor, inténtalo de nuevo."
   }
 }

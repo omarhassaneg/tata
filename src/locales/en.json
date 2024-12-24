@@ -108,7 +108,7 @@
   },
   "serviceArea": {
     "title": "Your Service Area",
-    "subtitle": "We’ve set some recommended settings based on industry standards. You can customize these values to suit your business needs.",
+    "subtitle": "We've set some recommended settings based on industry standards. You can customize these values to suit your business needs.",
     "radius": {
       "title": "radius in km",
       "description": "Service area around {address}"
@@ -130,7 +130,7 @@
   },
   "success": {
     "title": "Basic Information Complete",
-    "subtitle": "Now let’s review your settings",
+    "subtitle": "Now let's review your settings",
     "continue": "Continue"
   },
   "serviceConfirmation": {
@@ -150,7 +150,7 @@
   "policies": {
     "badge": "Business Protection",
     "title": "Policies & Waivers",
-    "subtitle": "We’ve created comprehensive policies and waivers for your business so you don’t have to start from scratch. You can customize them to fit your needs.",
+    "subtitle": "We've created comprehensive policies and waivers for your business so you don't have to start from scratch. You can customize them to fit your needs.",
     "stats": {
       "policies": {
         "value": "10 Policies",
@@ -292,5 +292,29 @@
     "save": "Save",
     "saving": "Saving...",
     "error": "Failed to save logo. Please try again."
+  },
+  "websiteSuccess": {
+    "badge": "Website Setup",
+    "title": "Settings Completed",
+    "subtitle": "Now, let's design your website in under 1 minute",
+    "continue": "Continue"
+  },
+  "contactDisplay": {
+    "badge": "Contact Display",
+    "title": "Contact Information",
+    "subtitle": "Choose which contact information to display on your website. You can change these settings anytime.",
+    "instagram": {
+      "title": "Instagram",
+      "placeholder": "@yourbusiness"
+    },
+    "phone": {
+      "title": "Phone Number"
+    },
+    "email": {
+      "title": "Email Address"
+    },
+    "save": "Save",
+    "saving": "Saving...",
+    "error": "Failed to save settings. Please try again."
   }
 }
