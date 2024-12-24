@@ -261,6 +261,36 @@
     "saving": "Enregistrement...",
     "save": "Enregistrer",
     "error": "Erreur lors de l'enregistrement du thème. Veuillez réessayer."
+  },
+  "websiteSlug": {
+    "badge": "Adresse du Site Web",
+    "title": "Choisissez votre URL",
+    "subtitle": "Choisissez une adresse unique pour votre site web. Utilisez uniquement des lettres, des chiffres et des tirets.",
+    "available": "Cette URL est disponible !",
+    "notAvailable": "Cette URL n'est pas disponible. Veuillez en essayer une autre.",
+    "placeholder": "votre-nom-entreprise",
+    "saving": "Enregistrement...",
+    "save": "Enregistrer",
+    "error": "Erreur lors de l'enregistrement de l'URL. Veuillez réessayer."
+  },
+  "websiteLogo": {
+    "badge": "Logo du Site Web",
+    "title": "Ajoutez votre Logo",
+    "subtitle": "Choisissez entre un logo texte ou téléchargez votre propre image.",
+    "textLogo": {
+      "title": "Logo Texte",
+      "description": "Utilisez le nom de votre entreprise comme logo texte stylisé",
+      "inputLabel": "Entrez le nom de votre entreprise ou marque personnelle",
+      "placeholder": "Entrez le nom de votre entreprise"
+    },
+    "imageLogo": {
+      "title": "Télécharger un Logo",
+      "description": "Téléchargez votre propre logo (PNG, JPG, SVG)",
+      "placeholder": "Cliquez pour télécharger votre logo",
+      "sizeError": "La taille du fichier doit être inférieure à 5MB"
+    },
+    "save": "Enregistrer",
+    "saving": "Enregistrement...",
+    "error": "Erreur lors de l'enregistrement du logo. Veuillez réessayer."
   }
-  
 }

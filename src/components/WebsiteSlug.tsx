@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useOnboarding } from '../context/OnboardingContext';
+import { useLanguage } from '../context/LanguageContext';
 import { Heading, Text } from './ui/Typography';
 import { Button } from './ui/Button';
 import { Globe, Check, X, Loader } from 'lucide-react';
@@ -11,6 +12,7 @@ import { Layout } from './ui/Layout';
 
 export default function WebsiteSlug() {
   const { state, dispatch } = useOnboarding();
+  const { translations } = useLanguage();
   const [slug, setSlug] = useState(() => 
     state.websiteSlug || generateDefaultSlug({
       businessName: state.userData.businessName,
@@ -100,13 +102,13 @@ export default function WebsiteSlug() {
             className="inline-flex items-center gap-2 bg-primary-gold/10 text-primary-gold px-4 py-2 rounded-full mb-4"
           >
             <Globe className="w-4 h-4" />
-            <span className="text-sm font-medium">Website Address</span>
+            <span className="text-sm font-medium">{translations?.websiteSlug?.badge || "Website Address"}</span>
           </motion.div>
           
-          <Heading className="mb-4">Choose Your URL</Heading>
+          <Heading className="mb-4">{translations?.websiteSlug?.title || "Choose Your URL"}</Heading>
           
           <Text className="max-w-md mx-auto">
-            Pick a unique address for your website. Use only letters, numbers, and hyphens.
+            {translations?.websiteSlug?.subtitle || "Pick a unique address for your website. Use only letters, numbers, and hyphens."}
           </Text>
         </div>
 
@@ -121,7 +123,7 @@ export default function WebsiteSlug() {
               type="text"
               value={slug}
               onChange={handleSlugChange}
-              placeholder="your-business-name"
+              placeholder={translations?.websiteSlug?.placeholder || "your-business-name"}
               className="w-full outline-none text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-600 lowercase bg-transparent"
               maxLength={30}
             />
@@ -149,8 +151,8 @@ export default function WebsiteSlug() {
               className={`mt-2 text-sm ${isAvailable ? 'text-green-600' : 'text-red-500'}`}
             >
               {isAvailable 
-                ? 'This URL is available!' 
-                : 'This URL is not available. Please try another.'}
+                ? translations?.websiteSlug?.available || 'This URL is available!' 
+                : translations?.websiteSlug?.notAvailable || 'This URL is not available. Please try another.'}
             </motion.div>
           )}
         </div>
@@ -165,10 +167,10 @@ export default function WebsiteSlug() {
               disabled={loading || !isAvailable || !slug}
               className="w-full"
             >
-              {loading ? 'Saving...' : 'Save'}
+              {loading ? translations?.websiteSlug?.saving || 'Saving...' : translations?.websiteSlug?.save || 'Save'}
             </Button>
             {error && (
-              <p className="text-sm text-red-500 text-center">{error}</p>
+              <p className="text-sm text-red-500 text-center">{error || translations?.websiteSlug?.error}</p>
             )}
           </motion.div>
         </motion.div>

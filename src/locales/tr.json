@@ -261,6 +261,36 @@
     "saving": "Kaydediliyor...",
     "save": "Kaydet",
     "error": "Tema kaydedilirken hata oluştu. Lütfen tekrar deneyin."
+  },
+  "websiteSlug": {
+    "badge": "Web Sitesi Adresi",
+    "title": "URL'nizi Seçin",
+    "subtitle": "Web siteniz için benzersiz bir adres seçin. Sadece harf, rakam ve tire kullanın.",
+    "available": "Bu URL kullanılabilir!",
+    "notAvailable": "Bu URL kullanılamaz. Lütfen başka bir tane deneyin.",
+    "placeholder": "isletmenizin-adi",
+    "saving": "Kaydediliyor...",
+    "save": "Kaydet",
+    "error": "URL kaydedilirken hata oluştu. Lütfen tekrar deneyin."
+  },
+  "websiteLogo": {
+    "badge": "Web Sitesi Logosu",
+    "title": "Logonuzu Ekleyin",
+    "subtitle": "Metin tabanlı bir logo seçin veya kendi görselinizi yükleyin.",
+    "textLogo": {
+      "title": "Metin Logo",
+      "description": "İşletme adınızı stilize edilmiş metin logo olarak kullanın",
+      "inputLabel": "İşletmenizin adını veya kişisel markanızı girin",
+      "placeholder": "İşletmenizin adını girin"
+    },
+    "imageLogo": {
+      "title": "Logo Yükle",
+      "description": "Kendi logonuzu yükleyin (PNG, JPG, SVG)",
+      "placeholder": "Logo yüklemek için tıklayın",
+      "sizeError": "Dosya boyutu 5MB'dan küçük olmalıdır"
+    },
+    "save": "Kaydet",
+    "saving": "Kaydediliyor...",
+    "error": "Logo kaydedilirken hata oluştu. Lütfen tekrar deneyin."
   }
-  
 }

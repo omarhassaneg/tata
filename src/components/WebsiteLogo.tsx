@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { useOnboarding } from '../context/OnboardingContext';
+import { useLanguage } from '../context/LanguageContext';
 import { Heading, Text } from './ui/Typography';
 import { Button } from './ui/Button';
 import { Image, Type, Upload, Loader } from 'lucide-react';
@@ -47,6 +48,7 @@ function LogoOption({ icon, title, description, selected, onClick }: LogoOptionP
 
 export default function WebsiteLogo() {
   const { dispatch, state } = useOnboarding();
+  const { translations } = useLanguage();
   const [logoType, setLogoType] = useState<'text' | 'image' | null>(
     state.websiteLogo?.type || 'text'
   );
@@ -66,7 +68,7 @@ export default function WebsiteLogo() {
     const file = e.target.files?.[0];
     if (file) {
       if (file.size > 5 * 1024 * 1024) {
-        alert('File size must be less than 5MB');
+        alert(translations?.websiteLogo?.imageLogo?.sizeError || 'File size must be less than 5MB');
         return;
       }
       
@@ -103,7 +105,7 @@ export default function WebsiteLogo() {
         dispatch({ type: 'SET_STEP', payload: 19 });
       } catch (err) {
         console.error('Error saving logo:', err);
-        setError('Failed to save logo. Please try again.');
+        setError(translations?.websiteLogo?.error || 'Failed to save logo. Please try again.');
       } finally {
         setLoading(false);
       }
@@ -155,13 +157,13 @@ export default function WebsiteLogo() {
             className="inline-flex items-center gap-2 bg-primary-gold/10 text-primary-gold px-4 py-2 rounded-full mb-4"
           >
             <Image className="w-4 h-4" />
-            <span className="text-sm font-medium">Website Logo</span>
+            <span className="text-sm font-medium">{translations?.websiteLogo?.badge || "Website Logo"}</span>
           </motion.div>
           
-          <Heading className="mb-4">Add Your Logo</Heading>
+          <Heading className="mb-4">{translations?.websiteLogo?.title || "Add Your Logo"}</Heading>
           
           <Text className="max-w-md mx-auto">
-            Choose between a text-based logo or upload your own image.
+            {translations?.websiteLogo?.subtitle || "Choose between a text-based logo or upload your own image."}
           </Text>
         </div>
 
@@ -171,16 +173,16 @@ export default function WebsiteLogo() {
       >
         <LogoOption
           icon={<Type className="w-6 h-6" />}
-          title="Text Logo"
-          description="Use your business name as a stylized text logo"
+          title={translations?.websiteLogo?.textLogo?.title || "Text Logo"}
+          description={translations?.websiteLogo?.textLogo?.description || "Use your business name as a stylized text logo"}
           selected={logoType === 'text'}
           onClick={() => setLogoType('text')}
         />
         
         <LogoOption
           icon={<Upload className="w-6 h-6" />}
-          title="Upload Logo"
-          description="Upload your own logo image (PNG, JPG, SVG)"
+          title={translations?.websiteLogo?.imageLogo?.title || "Upload Logo"}
+          description={translations?.websiteLogo?.imageLogo?.description || "Upload your own logo image (PNG, JPG, SVG)"}
           selected={logoType === 'image'}
           onClick={() => setLogoType('image')}
         />
@@ -193,7 +195,7 @@ export default function WebsiteLogo() {
           className="mb-8"
         >
           <Text className="text-sm text-gray-500 mb-2">
-            Enter your business name or personal brand name
+            {translations?.websiteLogo?.textLogo?.inputLabel || "Enter your business name or personal brand name"}
           </Text>
           <input
             type="text"
@@ -224,7 +226,7 @@ export default function WebsiteLogo() {
             onImageDelete={clearImage}
             maxSize={5}
             accept="image/png,image/jpeg,image/svg+xml"
-            placeholder="Click to upload your logo"
+            placeholder={translations?.websiteLogo?.imageLogo?.placeholder || "Click to upload your logo"}
             className="h-48"
           />
         </motion.div>
@@ -240,7 +242,7 @@ export default function WebsiteLogo() {
             disabled={loading || !logoType || (logoType === 'text' && !logoText) || (logoType === 'image' && !logoImage)}
             className="w-full"
           >
-            {loading ? 'Saving...' : 'Save'}
+            {loading ? translations?.websiteLogo?.saving || 'Saving...' : translations?.websiteLogo?.save || 'Save'}
           </Button>
           {error && (
             <p className="text-sm text-red-500 text-center">{error}</p>

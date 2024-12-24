@@ -261,5 +261,36 @@
     "saving": "Guardando...",
     "save": "Guardar",
     "error": "Error al guardar el tema. Por favor, inténtalo de nuevo."
+  },
+  "websiteSlug": {
+    "badge": "Dirección del Sitio Web",
+    "title": "Elige tu URL",
+    "subtitle": "Elige una dirección única para tu sitio web. Usa solo letras, números y guiones.",
+    "available": "¡Esta URL está disponible!",
+    "notAvailable": "Esta URL no está disponible. Por favor, prueba otra.",
+    "placeholder": "tu-nombre-de-negocio",
+    "saving": "Guardando...",
+    "save": "Guardar",
+    "error": "Error al guardar la URL. Por favor, inténtalo de nuevo."
+  },
+  "websiteLogo": {
+    "badge": "Logo del Sitio Web",
+    "title": "Agrega tu Logo",
+    "subtitle": "Elige entre un logo de texto o sube tu propia imagen.",
+    "textLogo": {
+      "title": "Logo de Texto",
+      "description": "Usa el nombre de tu negocio como un logo de texto estilizado",
+      "inputLabel": "Ingresa el nombre de tu negocio o marca personal",
+      "placeholder": "Ingresa el nombre de tu negocio"
+    },
+    "imageLogo": {
+      "title": "Subir Logo",
+      "description": "Sube tu propio logo (PNG, JPG, SVG)",
+      "placeholder": "Haz clic para subir tu logo",
+      "sizeError": "El archivo debe ser menor a 5MB"
+    },
+    "save": "Guardar",
+    "saving": "Guardando...",
+    "error": "Error al guardar el logo. Por favor, inténtalo de nuevo."
   }
 }

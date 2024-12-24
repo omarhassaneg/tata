@@ -261,5 +261,36 @@
     "saving": "Saving...",
     "save": "Save",
     "error": "Failed to save theme. Please try again."
+  },
+  "websiteSlug": {
+    "badge": "Website Address",
+    "title": "Choose Your URL",
+    "subtitle": "Pick a unique address for your website. Use only letters, numbers, and hyphens.",
+    "available": "This URL is available!",
+    "notAvailable": "This URL is not available. Please try another.",
+    "placeholder": "your-business-name",
+    "saving": "Saving...",
+    "save": "Save",
+    "error": "Failed to save slug. Please try again."
+  },
+  "websiteLogo": {
+    "badge": "Website Logo",
+    "title": "Add Your Logo",
+    "subtitle": "Choose between a text-based logo or upload your own image.",
+    "textLogo": {
+      "title": "Text Logo",
+      "description": "Use your business name as a stylized text logo",
+      "inputLabel": "Enter your business name or personal brand name",
+      "placeholder": "Enter your business name"
+    },
+    "imageLogo": {
+      "title": "Upload Logo",
+      "description": "Upload your own logo image (PNG, JPG, SVG)",
+      "placeholder": "Click to upload your logo",
+      "sizeError": "File size must be less than 5MB"
+    },
+    "save": "Save",
+    "saving": "Saving...",
+    "error": "Failed to save logo. Please try again."
   }
 }
