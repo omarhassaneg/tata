@@ -293,6 +293,25 @@
     "saving": "Enregistrement...",
     "error": "Erreur lors de l'enregistrement du logo. Veuillez réessayer."
   },
+  "websiteMainHeadline": {
+    "badge": "Titre Principal",
+    "title": "Créez votre Titre Principal",
+    "subtitle": "Votre titre principal est la première chose que verront les visiteurs. Rendez-le clair, convaincant et axé sur votre proposition de valeur principale.",
+    "examples": {
+      "title": "Exemples de Titres :",
+      "1": "Maquilleur Professionnel pour Votre Jour Spécial",
+      "2": "Expert en Coiffure à New York",
+      "3": "Transformez Votre Look avec des Services de Beauté Experts"
+    },
+    "input": {
+      "label": "Titre Principal",
+      "placeholder": "Entrez votre titre principal...",
+      "characters": "caractères"
+    },
+    "save": "Enregistrer",
+    "saving": "Enregistrement...",
+    "error": "Erreur lors de l'enregistrement du titre. Veuillez réessayer."
+  },
   "websiteCover": {
     "badge": "Image de Couverture",
     "title": "Ajoutez une Image de Couverture",

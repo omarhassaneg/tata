@@ -309,6 +309,25 @@
     "skip": "Skip",
     "error": "Failed to save cover image. Please try again."
   },
+  "websiteMainHeadline": {
+    "badge": "Main Headline",
+    "title": "Create Your Main Headline",
+    "subtitle": "Your main headline is the first thing visitors will see. Make it clear, compelling, and focused on your core value proposition.",
+    "examples": {
+      "title": "Example Headlines:",
+      "1": "Professional Makeup Artist for Your Special Day",
+      "2": "Expert Hair Styling in New York City",
+      "3": "Transform Your Look with Expert Beauty Services"
+    },
+    "input": {
+      "label": "Main Headline",
+      "placeholder": "Enter your main headline...",
+      "characters": "characters"
+    },
+    "save": "Save",
+    "saving": "Saving...",
+    "error": "Failed to save headline. Please try again."
+  },
   "contactDisplay": {
     "badge": "Contact Display",
     "title": "Contact Information",

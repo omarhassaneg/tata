@@ -293,6 +293,25 @@
     "saving": "Kaydediliyor...",
     "error": "Logo kaydedilirken hata oluştu. Lütfen tekrar deneyin."
   },
+  "websiteMainHeadline": {
+    "badge": "Ana Başlık",
+    "title": "Ana Başlığınızı Oluşturun",
+    "subtitle": "Ana başlığınız ziyaretçilerin göreceği ilk şeydir. Net, ikna edici ve temel değer teklifinize odaklı olmasını sağlayın.",
+    "examples": {
+      "title": "Örnek Başlıklar:",
+      "1": "Özel Gününüz için Profesyonel Makyaj Sanatçısı",
+      "2": "New York'ta Uzman Saç Stilisti",
+      "3": "Uzman Güzellik Hizmetleriyle Görünümünüzü Dönüştürün"
+    },
+    "input": {
+      "label": "Ana Başlık",
+      "placeholder": "Ana başlığınızı girin...",
+      "characters": "karakter"
+    },
+    "save": "Kaydet",
+    "saving": "Kaydediliyor...",
+    "error": "Başlık kaydedilirken hata oluştu. Lütfen tekrar deneyin."
+  },
   "websiteCover": {
     "badge": "Site Kapak Görseli",
     "title": "Kapak Görseli Ekleyin",

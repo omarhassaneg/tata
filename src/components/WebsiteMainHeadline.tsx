@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useOnboarding } from '../context/OnboardingContext';
+import { useLanguage } from '../context/LanguageContext';
 import { Heading, Text } from './ui/Typography';
 import { Button } from './ui/Button';
 import { Type, Loader } from 'lucide-react';
@@ -10,6 +11,7 @@ import { Layout } from './ui/Layout';
 
 export default function WebsiteMainHeadline() {
   const { state, dispatch } = useOnboarding();
+  const { translations } = useLanguage();
   const [headline, setHeadline] = useState('Pure Beauty Perfected');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -60,14 +62,13 @@ export default function WebsiteMainHeadline() {
             className="inline-flex items-center gap-2 bg-primary-gold/10 text-primary-gold px-4 py-2 rounded-full mb-4"
           >
             <Type className="w-4 h-4" />
-            <span className="text-sm font-medium">Main Headline</span>
+            <span className="text-sm font-medium">{translations?.websiteMainHeadline?.badge || "Main Headline"}</span>
           </motion.div>
           
-          <Heading className="mb-4">Create Your Main Headline</Heading>
+          <Heading className="mb-4">{translations?.websiteMainHeadline?.title || "Create Your Main Headline"}</Heading>
           
           <Text className="max-w-md mx-auto">
-            Your main headline is the first thing visitors will see. Make it clear, 
-            compelling, and focused on your core value proposition.
+            {translations?.websiteMainHeadline?.subtitle || "Your main headline is the first thing visitors will see. Make it clear, compelling, and focused on your core value proposition."}
           </Text>
         </div>
 
@@ -78,29 +79,29 @@ export default function WebsiteMainHeadline() {
         <div className="space-y-6">
           {/* Examples */}
           <div className="bg-white dark:bg-white/5 p-6 rounded-2xl border-2 border-gray-200 dark:border-white/10">
-            <Text className="text-sm font-medium text-gray-600 dark:text-gray-400 mb-2">Example Headlines:</Text>
+            <Text className="text-sm font-medium text-gray-600 dark:text-gray-400 mb-2">{translations?.websiteMainHeadline?.examples?.title || "Example Headlines:"}</Text>
             <div className="space-y-4 text-gray-600">
-              <div className="font-semibold text-gray-700 dark:text-gray-300">"Professional Makeup Artist for Your Special Day"</div>
-              <div className="font-semibold text-gray-700 dark:text-gray-300">"Expert Hair Styling in New York City"</div>
-              <div className="font-semibold text-gray-700 dark:text-gray-300">"Transform Your Look with Expert Beauty Services"</div>
+              <div className="font-semibold text-gray-700 dark:text-gray-300">"{translations?.websiteMainHeadline?.examples?.[1] || "Professional Makeup Artist for Your Special Day"}"</div>
+              <div className="font-semibold text-gray-700 dark:text-gray-300">"{translations?.websiteMainHeadline?.examples?.[2] || "Expert Hair Styling in New York City"}"</div>
+              <div className="font-semibold text-gray-700 dark:text-gray-300">"{translations?.websiteMainHeadline?.examples?.[3] || "Transform Your Look with Expert Beauty Services"}"</div>
             </div>
           </div>
 
           {/* Input Field */}
           <div className="space-y-2">
             <label className="block text-sm font-medium text-gray-700">
-              Main Headline
+              {translations?.websiteMainHeadline?.input?.label || "Main Headline"}
             </label>
             <textarea
               value={headline}
               onChange={(e) => setHeadline(e.target.value)}
-              placeholder="Enter your main headline..."
+              placeholder={translations?.websiteMainHeadline?.input?.placeholder || "Enter your main headline..."}
               className="w-full px-6 py-4 border-2 border-gray-200 dark:border-gray-700 rounded-2xl focus:border-primary-gold focus:ring-0 text-lg resize-none bg-white dark:bg-primary-navy dark:text-white placeholder-gray-400 dark:placeholder-gray-500"
               rows={2}
               maxLength={60}
             />
             <Text className="text-sm text-gray-500 text-right">
-              {headline.length}/60 characters
+              {headline.length}/60 {translations?.websiteMainHeadline?.input?.characters || "characters"}
             </Text>
           </div>
         </div>
@@ -115,10 +116,10 @@ export default function WebsiteMainHeadline() {
               disabled={loading}
               className="w-full"
             >
-              {loading ? 'Saving...' : 'Save'}
+              {loading ? translations?.websiteMainHeadline?.saving || 'Saving...' : translations?.websiteMainHeadline?.save || 'Save'}
             </Button>
             {error && (
-              <p className="text-sm text-red-500 text-center">{error}</p>
+              <p className="text-sm text-red-500 text-center">{error || translations?.websiteMainHeadline?.error}</p>
             )}
           </motion.div>
         </motion.div>

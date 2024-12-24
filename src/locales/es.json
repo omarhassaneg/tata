@@ -293,6 +293,25 @@
     "saving": "Guardando...",
     "error": "Error al guardar el logo. Por favor, inténtalo de nuevo."
   },
+  "websiteMainHeadline": {
+    "badge": "Título Principal",
+    "title": "Crea tu Título Principal",
+    "subtitle": "Tu título principal es lo primero que verán los visitantes. Hazlo claro, convincente y enfocado en tu propuesta de valor principal.",
+    "examples": {
+      "title": "Ejemplos de Títulos:",
+      "1": "Maquillador Profesional para tu Día Especial",
+      "2": "Experto en Peluquería en Nueva York",
+      "3": "Transforma tu Imagen con Servicios de Belleza Expertos"
+    },
+    "input": {
+      "label": "Título Principal",
+      "placeholder": "Ingresa tu título principal...",
+      "characters": "caracteres"
+    },
+    "save": "Guardar",
+    "saving": "Guardando...",
+    "error": "Error al guardar el título. Por favor, inténtalo de nuevo."
+  },
   "websiteCover": {
     "badge": "Imagen de Portada",
     "title": "Agrega una Imagen de Portada",
