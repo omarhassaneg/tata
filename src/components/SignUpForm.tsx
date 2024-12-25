@@ -44,8 +44,8 @@ export default function SignUpForm() {
   });
 
   const questions: Question[] = [
-    // Show phone input first for social login users who don't have phone
-    ...(state.userData.authMethod === 'social' && !state.userData.phone ? [{
+    // Show phone input first for social login users and email login users who don't have phone
+    ...((state.userData.authMethod === 'social' || state.userData.authMethod === 'email') && !state.userData.phone ? [{
       id: "phone",
       field: "phone" as keyof FormData,
       label: "What's your phone number?",
