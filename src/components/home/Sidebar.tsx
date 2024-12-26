@@ -14,7 +14,7 @@ const menuItems = [
 
 export function Sidebar() {
   return (
-    <aside className="w-16 bg-primary-navy flex flex-col items-center py-6 space-y-8">
+    <aside className="w-16 bg-primary-navy flex flex-col items-center py-6 space-y-8 fixed left-0 top-0 h-full z-50">
       {menuItems.map(({ icon: Icon, label, active }) => (
         <button
           key={label}
