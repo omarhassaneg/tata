@@ -530,8 +530,11 @@
     "title": "Download Glamic",
     "subtitle": "Experience the future of beauty business management on your mobile device. Our web experience is coming soon!",
     "downloadButton": "Download App",
-    "qrCodeInstruction": "Scan QR code with your mobile device",
-    "availableDevices": "Available for iOS and Android devices"
+    "qrCodeInstruction": "Scan or click QR code to download",
+    "availableDevices": "Available for iOS and Android devices",
+    "subscriptionSuccess": "Subscription Activated Successfully!",
+    "subscriptionMessage": "Your premium features are now unlocked",
+    "manageSubscription": "Manage Subscription"
   },
   "subscriptionSuccess": {
     "title": "Welcome to Glamic! 🎉",

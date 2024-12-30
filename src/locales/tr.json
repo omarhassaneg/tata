@@ -530,8 +530,11 @@
     "title": "Glamic'i İndirin",
     "subtitle": "Güzellik işletmenizi mobil cihazınızdan yönetmenin geleceğini keşfedin. Web deneyimimiz yakında geliyor!",
     "downloadButton": "Uygulamayı İndir",
-    "qrCodeInstruction": "QR kodunu mobil cihazınızla tarayın",
-    "availableDevices": "iOS ve Android cihazlar için kullanılabilir"
+    "qrCodeInstruction": "QR kodunu tarayın veya tıklayın",
+    "availableDevices": "iOS ve Android cihazlar için kullanılabilir",
+    "subscriptionSuccess": "Abonelik Başarıyla Etkinleştirildi!",
+    "subscriptionMessage": "Premium özellikleriniz açıldı",
+    "manageSubscription": "Aboneliği Yönet"
   },
   "subscriptionSuccess": {
     "title": "Glamic'e Hoş Geldiniz! 🎉",

@@ -530,8 +530,11 @@
     "title": "Téléchargez Glamic",
     "subtitle": "Découvrez l'avenir de la gestion des entreprises de beauté sur votre appareil mobile. Notre expérience web sera bientôt disponible !",
     "downloadButton": "Télécharger l'App",
-    "qrCodeInstruction": "Scannez le code QR avec votre appareil mobile",
-    "availableDevices": "Disponible pour les appareils iOS et Android"
+    "qrCodeInstruction": "Scannez ou cliquez sur le code QR pour télécharger",
+    "availableDevices": "Disponible pour les appareils iOS et Android",
+    "subscriptionSuccess": "Abonnement Activé avec Succès !",
+    "subscriptionMessage": "Vos fonctionnalités premium sont maintenant débloquées",
+    "manageSubscription": "Gérer l'Abonnement"
   },
   "subscriptionSuccess": {
     "title": "Bienvenue sur Glamic ! 🎉",

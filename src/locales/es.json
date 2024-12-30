@@ -530,8 +530,11 @@
     "title": "Descarga Glamic",
     "subtitle": "Experimenta el futuro de la gestión de negocios de belleza en tu dispositivo móvil. ¡Nuestra experiencia web estará disponible pronto!",
     "downloadButton": "Descargar App",
-    "qrCodeInstruction": "Escanea el código QR con tu dispositivo móvil",
-    "availableDevices": "Disponible para dispositivos iOS y Android"
+    "qrCodeInstruction": "Escanea o haz clic en el código QR para descargar",
+    "availableDevices": "Disponible para dispositivos iOS y Android",
+    "subscriptionSuccess": "¡Suscripción Activada Exitosamente!",
+    "subscriptionMessage": "Tus funciones premium están desbloqueadas",
+    "manageSubscription": "Administrar Suscripción"
   },
   "subscriptionSuccess": {
     "title": "¡Bienvenido a Glamic! 🎉",
