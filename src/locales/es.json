@@ -476,28 +476,28 @@
     "error": "Error al guardar la configuración. Por favor, inténtalo de nuevo."
   },
   "subscriptionPlans": {
-    "badge": "Plan de Suscripción",
-    "title": "Comienza Hoy",
-    "subtitle": "Accede a todas las funciones y comienza a hacer crecer tu negocio con Glamic",
+    "badge": "Prueba Gratuita de 7 Días",
+    "title": "Desbloquea Todo lo que Has Configurado",
+    "subtitle": "Obtén acceso completo a tus herramientas de negocio personalizadas con nuestra prueba sin riesgo",
     "plans": {
       "yearly": {
         "title": "Plan Anual",
-        "subtitle": "Facturado anualmente",
+        "subtitle": "Mejor valor - paga menos mensualmente",
         "savings": "Ahorra 20%"
       },
       "monthly": {
         "title": "Plan Mensual",
-        "subtitle": "Facturado mensualmente"
+        "subtitle": "Facturación mensual flexible"
       }
     },
     "features": {
-      "booking": "Herramientas avanzadas de reserva para hacer crecer tu negocio",
-      "automation": "Tareas administrativas automatizadas para ahorrarte tiempo",
-      "security": "Sitio web profesional y pagos seguros"
+      "booking": "Tu sistema de reservas completo con todas las funciones desbloqueadas",
+      "automation": "Herramientas de automatización inteligentes para administrar tu negocio eficientemente",
+      "security": "Sitio web profesional con procesamiento de pagos seguro"
     },
     "action": {
-      "button": "Comienza Hoy - $0 a Pagar Ahora",
-      "disclaimer": "Cancela cuando quieras. No se requiere compromiso a largo plazo."
+      "button": "Comenzar Prueba Gratuita de 7 Días",
+      "disclaimer": "Prueba todo gratis durante 7 días. Cancela en cualquier momento antes de que termine la prueba - ¡sin riesgo!"
     }
   },
   "creditCardPayments": {

@@ -476,28 +476,28 @@
     "error": "Failed to save settings. Please try again."
   },
   "subscriptionPlans": {
-    "badge": "Subscription Plan",
-    "title": "Get Started Today",
-    "subtitle": "Access all features and start growing your business with Glamic",
+    "badge": "7-Day Free Trial",
+    "title": "Unlock Everything You've Set Up",
+    "subtitle": "Get full access to your customized business tools with our risk-free trial",
     "plans": {
       "yearly": {
         "title": "Annual Plan",
-        "subtitle": "Billed yearly",
+        "subtitle": "Best value - pay less monthly",
         "savings": "Save 20%"
       },
       "monthly": {
         "title": "Monthly Plan",
-        "subtitle": "Billed monthly"
+        "subtitle": "Flexible monthly billing"
       }
     },
     "features": {
-      "booking": "Advanced booking tools to grow your business",
-      "automation": "Automated admin tasks to save you time",
-      "security": "Professional website and secure payments"
+      "booking": "Your complete booking system with all features unlocked",
+      "automation": "Smart automation tools to run your business efficiently",
+      "security": "Professional website with secure payment processing"
     },
     "action": {
-      "button": "Start Today - $0 Due Now",
-      "disclaimer": "Cancel anytime. No long-term commitment required."
+      "button": "Start 7-Day Free Trial",
+      "disclaimer": "Try everything free for 7 days. Cancel anytime before trial ends - no risk!"
     }
   },
   "creditCardPayments": {

@@ -476,28 +476,28 @@
     "error": "Erreur lors de l'enregistrement des paramètres. Veuillez réessayer."
   },
   "subscriptionPlans": {
-    "badge": "Plan d'Abonnement",
-    "title": "Commencez Aujourd'hui",
-    "subtitle": "Accédez à toutes les fonctionnalités et développez votre entreprise avec Glamic",
+    "badge": "Essai Gratuit de 7 Jours",
+    "title": "Débloquez Tout ce que Vous Avez Configuré",
+    "subtitle": "Accédez à tous vos outils professionnels personnalisés avec notre essai sans risque",
     "plans": {
       "yearly": {
         "title": "Plan Annuel",
-        "subtitle": "Facturation annuelle",
+        "subtitle": "Meilleure valeur - payez moins mensuellement",
         "savings": "Économisez 20%"
       },
       "monthly": {
         "title": "Plan Mensuel",
-        "subtitle": "Facturation mensuelle"
+        "subtitle": "Facturation mensuelle flexible"
       }
     },
     "features": {
-      "booking": "Outils de réservation avancés pour développer votre entreprise",
-      "automation": "Tâches administratives automatisées pour gagner du temps",
-      "security": "Site web professionnel et paiements sécurisés"
+      "booking": "Votre système de réservation complet avec toutes les fonctionnalités débloquées",
+      "automation": "Outils d'automatisation intelligents pour gérer votre entreprise efficacement",
+      "security": "Site web professionnel avec traitement des paiements sécurisé"
     },
     "action": {
-      "button": "Commencez Aujourd'hui - 0$ à Payer Maintenant",
-      "disclaimer": "Annulez à tout moment. Aucun engagement à long terme requis."
+      "button": "Commencer l'Essai Gratuit de 7 Jours",
+      "disclaimer": "Essayez tout gratuitement pendant 7 jours. Annulez à tout moment avant la fin de l'essai - sans risque !"
     }
   },
   "creditCardPayments": {

@@ -476,28 +476,28 @@
     "error": "Ayarlar kaydedilirken hata oluştu. Lütfen tekrar deneyin."
   },
   "subscriptionPlans": {
-    "badge": "Abonelik Planı",
-    "title": "Bugün Başlayın",
-    "subtitle": "Tüm özelliklere erişin ve Glamic ile işletmenizi büyütmeye başlayın",
+    "badge": "7 Gün Ücretsiz Deneme",
+    "title": "Kurduğunuz Her Şeyi Açın",
+    "subtitle": "Özelleştirilmiş iş araçlarınıza risksiz deneme ile tam erişim kazanın",
     "plans": {
       "yearly": {
         "title": "Yıllık Plan",
-        "subtitle": "Yıllık faturalandırma",
+        "subtitle": "En iyi değer - aylık daha az ödeyin",
         "savings": "%20 Tasarruf"
       },
       "monthly": {
         "title": "Aylık Plan",
-        "subtitle": "Aylık faturalandırma"
+        "subtitle": "Esnek aylık ödeme"
       }
     },
     "features": {
-      "booking": "İşletmenizi büyütmek için gelişmiş rezervasyon araçları",
-      "automation": "Zamandan tasarruf için otomatik yönetim görevleri",
-      "security": "Profesyonel web sitesi ve güvenli ödemeler"
+      "booking": "Tüm özellikleri açık tam rezervasyon sisteminiz",
+      "automation": "İşletmenizi verimli yönetmek için akıllı otomasyon araçları",
+      "security": "Güvenli ödeme işlemleriyle profesyonel web sitesi"
     },
     "action": {
-      "button": "Bugün Başlayın - Şimdi 0$ Ödeyin",
-      "disclaimer": "İstediğiniz zaman iptal edin. Uzun vadeli taahhüt gerekmez."
+      "button": "7 Günlük Ücretsiz Denemeyi Başlat",
+      "disclaimer": "7 gün boyunca her şeyi ücretsiz deneyin. Deneme süresi bitmeden istediğiniz zaman iptal edin - risk yok!"
     }
   },
   "creditCardPayments": {
