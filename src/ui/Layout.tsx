@@ -34,6 +34,7 @@ export function Layout({ children, maxWidth = 'md', showBackButton = true }: Lay
     26, // DepositSettings
     30, // SubscriptionPlans
     31, // SubscriptionSuccess
+    32, // AppDownload
   ].includes(state.step);
   return (
     <div className="flex flex-col flex-1">
