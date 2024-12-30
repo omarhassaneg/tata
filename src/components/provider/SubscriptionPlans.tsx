@@ -143,7 +143,7 @@ export default function SubscriptionPlans() {
         <div className="space-y-4">
           <Button
             variant="primary"
-            onClick={() => dispatch({ type: 'SET_STEP', payload: 31 })}
+            onClick={() => dispatch({ type: 'SET_STEP', payload: 32 })}
             className="w-full"
           >
             {translations?.subscriptionPlans?.action?.button}

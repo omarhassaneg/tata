@@ -36,7 +36,7 @@ export default function CreditCardPayments() {
   const { translations } = useLanguage();
 
   const handleSkip = () => {
-    dispatch({ type: 'SET_STEP', payload: 30 });
+    dispatch({ type: 'SET_STEP', payload: 31 });
   };
 
   return (

@@ -96,7 +96,7 @@ function DayCard({ day, onUpdate, canCopyTo, onCopyTo }: DayCardProps) {
   return (
     <motion.div 
       variants={fadeIn} 
-      className="bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-xl p-4 transition-all relative overflow-hidden"
+      className="bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-xl p-4 transition-all relative"
     >
       <div className="flex flex-wrap items-center gap-4 mb-4">
         <div className="flex items-center gap-3">
@@ -168,7 +168,7 @@ function DayCard({ day, onUpdate, canCopyTo, onCopyTo }: DayCardProps) {
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          className={`absolute ${isMobile ? 'left-0 right-0' : 'right-0 w-48'} top-16 mt-2 bg-white dark:bg-primary-navy/95 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 z-10 backdrop-blur-sm`}
+          className={`absolute ${isMobile ? 'left-0 right-0' : 'right-0 w-48'} top-0 -translate-y-full mt-[-10px] bg-white dark:bg-primary-navy/95 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 z-50 backdrop-blur-sm`}
         >
           <div className="p-3 border-b border-gray-100 dark:border-gray-800">
             <div className="text-sm font-medium mb-2">Copy hours to:</div>

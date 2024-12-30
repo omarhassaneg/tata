@@ -72,7 +72,7 @@ export default function SubscriptionSuccess() {
   };
 
   const handleGoToAccount = () => {
-    dispatch({ type: 'SET_STEP', payload: 32 });
+    dispatch({ type: 'SET_STEP', payload: 30 });
   };
 
   return (
